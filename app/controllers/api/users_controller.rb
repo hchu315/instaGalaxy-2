@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     if @user
-      render :json
+      render "api/users/show"
       # FIX THIS
     else
       flash.now[:errors] = user.errors.full_messages
@@ -15,13 +15,13 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.create()
+    @user = User.create(user_params)
     if @user.save
       login(@user)
-      render :json
-      # FIX THIS
+      render "api/users/show"
+      # FIX THIS??
     else
-      flash.now[:errors] = @user.errors.full_messages
+      render json: @user.errors.full_messages, status: 422
     end
   end
 
