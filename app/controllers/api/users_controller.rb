@@ -1,8 +1,4 @@
-class UsersController < ApplicationController
-
-  def new
-    @user = User.new
-  end
+class Api::UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])

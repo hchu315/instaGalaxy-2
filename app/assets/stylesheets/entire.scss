@@ -1,0 +1,10 @@
+.whole {
+  display: flex;
+  // flex-direction: column;
+  width: 1000px;
+  height: 1000px;
+  justify-content: space-between;
+  align-items: flex-start;
+  border: 2px solid red;
+  z-index: 100;
+}

@@ -5,27 +5,25 @@ import {
   Redirect,
   Switch,
   Link,
-  HashRouter
+  HashRouter,
+  withRouter
 } from 'react-router-dom';
+import SignupContainer from './session/signup_container';
+import LoginContainer from './session/login_form_container';
+import FeedContainer from './feed/feed_container';
 
-// import GreetingContainer from './greeting/greeting_container';
-// import SignUpFormContainer from './session_form/signup_form_container';
-// import LogInFormContainer from './session_form/login_form_container';
-// import SearchContainer from './search/search_container';
-// import BenchShowContainer from './bench_show/bench_show_container';
-// import BenchFormContainer from './bench_form/bench_form_container';
 // import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
-  <div>
-    <header>
+  <div className='whole'>
       <Link to="/" className="header-link">
         <h1>instaGalaxy</h1>
       </Link>
-    </header>
-    <Switch>
-    </Switch>
+
+      <Route path="/login" component={LoginContainer} />
+      <Route path="/signup" component={SignupContainer} />
+      <Route path="/feed" component={FeedContainer} />
   </div>
 );
 
-export default App;
+export default withRouter(App);
