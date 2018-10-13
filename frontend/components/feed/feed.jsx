@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 class Feed extends React.Component {
 
@@ -6,6 +7,7 @@ class Feed extends React.Component {
     return (
       <div>
         werk werk werk werk werk
+        <Link to={'/greeting'}>Future homepage</Link>
       </div>
     )
   }

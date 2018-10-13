@@ -1,10 +1,79 @@
-.whole {
+// .whole {
+  // display: flex;
+  // justify-content: center;
+  // align-self: flex-end;
+  // flex-direction: row;
+// }
+
+#root {
+  height: 100vh;
+}
+
+.login {
+  height: 100%;
+}
+
+.login-page {
+  background-color: blue;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.full-form-container {
+  background-color: pink;
+  display: flex;
+  // justify-content: center;
+  align-items: center;
   // flex-direction: column;
-  width: 1000px;
-  height: 1000px;
-  justify-content: space-between;
-  align-items: flex-start;
+  width: 700px;
+  height: 565px;
   border: 2px solid red;
-  z-index: 100;
+  // z-index: 100;
+}
+
+.login-links-container {
+  // display: flex;
+  // flex-direction: row-reverse;
+}
+
+.login-form-container {
+  // background-color: black;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  flex-direction: column;
+  width: 100%;
+  border: 2px solid black;
+
+}
+
+.my_image {
+  background-image: image_url('resized_homepage_img.png');
+  background-size: 100%;
+  width:352px;
+  height:100%;
+}
+
+.login-links-form {
+  width: 50%;
+  height: 100%;
+}
+
+.login-links {
+  background: yellow;
+  display: flex;
+  // min-height:
+  // flex-direction: row
+}
+
+.footer-outer-container {
+  background-color: black;
+}
+
+.submit {
+  background-color: dodgerblue;
+  opacity: 0.2;
 }
