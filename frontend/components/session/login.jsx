@@ -10,6 +10,7 @@ class Login extends React.Component {
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleDemo = this.handleDemo.bind(this)
   }
 
   handleInput(field){
@@ -21,6 +22,11 @@ class Login extends React.Component {
   handleSubmit(e){
     e.preventDefault();
     this.props.login(this.state).then(this.props.history.push('/feed'));
+  }
+
+  handleDemo(e){
+    e.preventDefault();
+    this.props.login({username: "Demo_User", password: "demo_user"}).then(this.props.history.push('/feed'));
   }
 
   render(){
@@ -53,6 +59,7 @@ class Login extends React.Component {
               <div className="signup-text">
                 Don't have an account?
                 <Link to={'/signup'}>&nbsp;Sign up</Link>
+                <button onClick={this.handleDemo}>Log in as Demo User</button>
               </div>
             </div>
             <div className="login-links">
