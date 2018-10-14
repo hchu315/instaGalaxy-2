@@ -1,8 +1,10 @@
 import { connect } from 'react-redux';
+// import { } from '';
 import Feed from './feed';
 
+
 const mapStateToProps = (state) => ({
-  posts: state.posts
+  posts: (state.posts)
 });
 
 const mapDispatchtoProps = (dispatch) => ({

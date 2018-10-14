@@ -10,6 +10,7 @@ class Signup extends React.Component {
       full_name: '',
     };
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleDemo = this.handleDemo.bind(this)
   }
 
   handleInput(field){
@@ -23,6 +24,11 @@ class Signup extends React.Component {
     this.props.signup(this.state).then(this.props.history.push('/feed'));
   }
   // is the history.push necessary?
+
+  handleDemo(e){
+    e.preventDefault();
+    this.props.login({username: "Demo_User", password: "demo_user"}).then(this.props.history.push('/feed'));
+  }
 
   render(){
     return (
@@ -53,6 +59,8 @@ class Signup extends React.Component {
           <br/>
           <button onClick={this.handleSubmit}>Sign Up</button>
         </form>
+
+        <button onClick={this.handleDemo}>Log in as Demo User</button>
       </div>
     )
 
