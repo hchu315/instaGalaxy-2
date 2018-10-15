@@ -46,7 +46,7 @@ const App = () => (
             <li className="footer-nav-items"><a className="footer-nav-links" href="">Language</a></li>
           </ul>
         </nav>
-        <span className="copyright-logo">© 2018 Instagram</span>
+        <span className="copyright-logo">© 2018 Instagalaxy</span>
         </div>
       </div>
     </footer>
