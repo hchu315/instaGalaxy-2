@@ -228,9 +228,13 @@
   display: block;
   // align-items: stretch;
   // flex-direction: row;
-  // position: relative;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%
   // text-align: center;
-  margin: 0 auto;
+  // margin: 0 auto;
 }
 
 .footer-inner-container {
