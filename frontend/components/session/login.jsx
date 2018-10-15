@@ -36,39 +36,43 @@ class Login extends React.Component {
           <div className="my_image"/>
           <div className="login-links-form">
             <div className="login-form-container">
-              <h1 className="login-form-header">InstaGalaxy</h1>
+              <h1 className="login-form-header">instaGalaxy</h1>
               <div className="form-input-container">
                 <form onSubmit={this.handleSubmit}>
-                  <div className="username-input">
-                  <label>
-                    <input type="text" value={this.state.username} onChange={this.handleInput("username")}
-                    placeholder="Username"/>
-                  </label>
+                  <div className="username-input-container">
+                    <label>
+                      <input className="username-input" type="text" value={this.state.username} onChange={this.handleInput("username")}
+                      placeholder="Username"/>
+                    </label>
                   </div>
-                  <br/>
-                  <label>
-                    <input type="password" value={this.state.password} onChange={this.handleInput("password")}
-                    placeholder="Password"/>
-                  </label>
-                  <br/>
-                    <input className="submit" type='submit' value='Log in' />
+                  <div className="password-input-container">
+                    <label>
+                      <input className="password-input" type="password" value={this.state.password} onChange={this.handleInput("password")}
+                      placeholder="Password"/>
+                    </label>
+                  </div>
+                  <div className="login-button-container">
+                    <input className="login-button" type='submit' value='Log in' />
+                  </div>
+                  <a className="forgot-password2" href="">Forgot password?</a>
                 </form>
               </div>
             </div>
             <div>
-              <div className="signup-text">
-                Don't have an account?
-                <Link to={'/signup'}>&nbsp;Sign up</Link>
-                <button onClick={this.handleDemo}>Log in as Demo User</button>
+              <div className="signup-text-container">
+                <span className="inner-signup-text-container">
+                  <p>Don't have an account?</p>
+                  <Link className="signup-text" to={'/signup'}>&nbsp;Sign up</Link>
+                </span>
+                <button className="demo-button" onClick={this.handleDemo}>Log in as Demo User</button>
               </div>
             </div>
             <div className="login-links">
               <p>Join the galaxy.</p>
               <div className="appstore-links">
-              <a href="https://itunes.apple.com/app/instagram/id389801252?mt=8&vt=lo"><img src="https://www.instagram.com/static/images/appstore-install-badges/badge_ios_english-en.png/180ae7a0bcf7.png" alt="Apple Store" height="30%" width="30%"></img></a>
-              <br/>
-              <a href="https://play.google.com/store/apps/details?id=com.instagram.android&referrer=utm_source%3Dinstagramweb%26utm_campaign%3DloginPage%26ig_mid%3DW0-33AAEAAHLuYBrhDxcrl94J_zF%26utm_content%3Dlo%26utm_medium%3Dbadge">
-                <img src="https://www.instagram.com/static/images/appstore-install-badges/badge_android_english-en.png/e9cd846dc748.png" alt="Google Play" height="30%" width="30%"></img></a>
+              <a className ="appstore-buttons" href="https://itunes.apple.com/app/instagram/id389801252?mt=8&vt=lo"><img src="https://www.instagram.com/static/images/appstore-install-badges/badge_ios_english-en.png/180ae7a0bcf7.png" alt="Apple Store" height="40%" width="40%"></img></a>
+              <a className ="appstore-buttons" href="https://play.google.com/store/apps/details?id=com.instagram.android&referrer=utm_source%3Dinstagramweb%26utm_campaign%3DloginPage%26ig_mid%3DW0-33AAEAAHLuYBrhDxcrl94J_zF%26utm_content%3Dlo%26utm_medium%3Dbadge">
+                <img src="https://www.instagram.com/static/images/appstore-install-badges/badge_android_english-en.png/e9cd846dc748.png" alt="Google Play" height="40%" width="40%"></img></a>
               </div>
             </div>
           </div>

@@ -30,6 +30,7 @@ const App = () => (
       </Switch>
     <footer className="footer-container">
       <div className="footer-inner-container">
+        <div className="nav-logo-container">
         <nav className="footer-nav-bar">
           <ul className="footer-nav-itemlist">
             <li className="footer-nav-items"><a className="footer-nav-links" href="">About us</a></li>
@@ -44,8 +45,9 @@ const App = () => (
             <li className="footer-nav-items"><a className="footer-nav-links" href="">Hashtags</a></li>
             <li className="footer-nav-items"><a className="footer-nav-links" href="">Language</a></li>
           </ul>
-          <span className="copyright-logo">© 2018 Instagram</span>
         </nav>
+        <span className="copyright-logo">© 2018 Instagram</span>
+        </div>
       </div>
     </footer>
   </div>
