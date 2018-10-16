@@ -17,16 +17,15 @@ import Errors from './errors/error';
 import { AuthRoute, ProtectedRoute } from '../utils/route_utils';
 
 
+// change login to main and flex boxed it to column
 const App = () => (
-  <div className="login">
+  <div className="main">
       <Switch>
         <AuthRoute exact path="/" component={LoginContainer} />
         <AuthRoute exact path="/signup" component={SignupContainer} />
         <ProtectedRoute exact path="/feed" component={FeedContainer} />
         <Route exact path="/greeting" component={GreetingContainer} />
         <Route component={Errors} />
-
-        // add error Redirect to '/'
       </Switch>
     <footer className="footer-container">
       <div className="footer-inner-container">

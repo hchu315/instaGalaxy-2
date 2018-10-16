@@ -1,14 +1,15 @@
 import { connect } from 'react-redux';
-// import { } from '';
+import { fetchPosts } from '../../actions/post_actions';
 import Feed from './feed';
 
 
 const mapStateToProps = (state) => ({
-  posts: (state.posts)
+  // debugger;
+  posts: Object.values(state.entities.posts)
 });
 
-const mapDispatchtoProps = (dispatch) => ({
-
+const mapDispatchToProps = (dispatch) => ({
+  fetchPosts: () => dispatch(fetchPosts())
 });
 
-export default connect(mapStateToProps, mapDispatchtoProps)(Feed);
+export default connect(mapStateToProps, mapDispatchToProps)(Feed);
