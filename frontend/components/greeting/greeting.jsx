@@ -1,6 +1,7 @@
 // import GreetingContainer from './greeting_container';
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import NavBar from '../nav_bar/nav_bar';
 
 class Greeting extends React.Component {
   constructor(props) {
@@ -16,6 +17,7 @@ class Greeting extends React.Component {
   render() {
     return (
       <div>
+        <NavBar />
         <header>
           <h1>Greetings InstaGalaxy</h1>
         </header>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PostIndexItem from './post_index_item';
+import NavBar from '../nav_bar/nav_bar';
 
 class Feed extends React.Component {
 
@@ -10,13 +11,13 @@ class Feed extends React.Component {
 
   render() {
     const posts = this.props.posts.map(post =>
-      <PostIndexItem key={post.id} post={post} />
+      <PostIndexItem key={post.id} post={post}  />
     );
 
     return (
       <section>
-        <Link to={'/greeting'}>Future homepage</Link>
-        <ul>
+        <NavBar/>
+        <ul className="feed">
           {posts}
         </ul>
       </section>
@@ -25,3 +26,5 @@ class Feed extends React.Component {
 }
 
 export default Feed;
+
+// <Link to={'/greeting'}>Future homepage</Link>

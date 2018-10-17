@@ -17,12 +17,19 @@
 end
 
 10.times do |num|
-  Post.create({
+  post = Post.create({
     user_id: Faker::Number.between(1, 10),
     post_caption: Faker::StarWars.unique.quote
     })
+    post.image.attach(io: File.open("/Users/Henry/Documents/instagalaxy_album/users/#{num}.jpg"), filename: "#{num}.jpg")
 end
 
 
 
 Demo_User = User.create!( {username: "Demo_User", email: "ItsADemo@demo.com", full_name: "Darth Demo User", password: "demo_user"} )
+
+# in times loop, pass i,
+#
+# 10.times do |i|
+#   user = USer.create
+#   user.photo.attach(io: File.open(""))
