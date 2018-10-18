@@ -1,6 +1,6 @@
 class Api::PostsController < ApplicationController
   def index
-    @posts = Post.all
+    @posts = Post.all.includes(:user)
   end
 
   def show
@@ -8,8 +8,14 @@ class Api::PostsController < ApplicationController
   end
 
   def create
-    @post = Post.create!(post_params)
-    render :show
+    @post = Post.new(post_params)
+    @post.user_id = current_user.id
+
+    if @post.save
+      render json: {message: "The droid has received your information!"}
+    else
+      render json: post.errors.full_messages
+    end
   end
 
   def update
@@ -29,7 +35,7 @@ class Api::PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:user_id, :post_caption)
+    params.require(:post).permit(:user_id, :post_caption, :image)
   end
 
 end

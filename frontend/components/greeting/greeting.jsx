@@ -6,7 +6,6 @@ import NavBar from '../nav_bar/nav_bar';
 class Greeting extends React.Component {
   constructor(props) {
     super(props);
-    // this.logout = this.props.
   }
 
   logoutHandler (){
@@ -18,10 +17,11 @@ class Greeting extends React.Component {
     return (
       <div>
         <NavBar />
-        <header>
-          <h1>Greetings InstaGalaxy</h1>
-        </header>
-        <button onClick={this.logoutHandler.bind(this)}>Log out</button>
+        <div className="user-page-container">
+          <header className="user-header-container">
+            <button onClick={this.logoutHandler.bind(this)}>Log out</button>
+          </header>
+        </div>
       </div>
   )}
 }

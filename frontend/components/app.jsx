@@ -12,9 +12,11 @@ import SignupContainer from './session/signup_container';
 import LoginContainer from './session/login_form_container';
 import FeedContainer from './feed/feed_container';
 import GreetingContainer from './greeting/greeting_container';
-// import NavBarContainer from './nav_bar/nav_bar_container';
+import Upload from './upload/upload';
 import Errors from './errors/error';
+// import Modal from './modal/modal';
 import { AuthRoute, ProtectedRoute } from '../utils/route_utils';
+
 
 
 // change login to main and flex boxed it to column
@@ -24,35 +26,14 @@ const App = () => (
         <AuthRoute exact path="/" component={LoginContainer} />
         <AuthRoute exact path="/signup" component={SignupContainer} />
         <ProtectedRoute exact path="/feed" component={FeedContainer} />
-        <Route exact path="/greeting" component={GreetingContainer} />
+        <ProtectedRoute exact path="/greeting" component={GreetingContainer} />
+        <ProtectedRoute exact path="/upload" component={Upload} />
         <Route component={Errors} />
       </Switch>
-    <footer className="footer-container">
-      <div className="footer-inner-container">
-        <div className="nav-logo-container">
-          <nav className="footer-nav-bar">
-            <ul className="footer-nav-itemlist">
-              <li className="footer-nav-items"><a className="footer-nav-links" href="">About us</a></li>
-              <li className="footer-nav-items"><a className="footer-nav-links" href="">Support</a></li>
-              <li className="footer-nav-items"><a className="footer-nav-links" href="">Press</a></li>
-              <li className="footer-nav-items"><a className="footer-nav-links" href="">API</a></li>
-              <li className="footer-nav-items"><a className="footer-nav-links" href="">Jobs</a></li>
-              <li className="footer-nav-items"><a className="footer-nav-links" href="">Privacy</a></li>
-              <li className="footer-nav-items"><a className="footer-nav-links" href="">Terms</a></li>
-              <li className="footer-nav-items"><a className="footer-nav-links" href="">Directory</a></li>
-              <li className="footer-nav-items"><a className="footer-nav-links" href="">Profiles</a></li>
-              <li className="footer-nav-items"><a className="footer-nav-links" href="">Hashtags</a></li>
-              <li className="footer-nav-items"><a className="footer-nav-links" href="">Language</a></li>
-            </ul>
-          </nav>
-          <span className="copyright-logo">© 2018 Instagalaxy</span>
-        </div>
-      </div>
-    </footer>
+
   </div>
 );
 
 export default withRouter(App);
 
-// <Route path="/" component={NavBarContainer} />
 // <Redirect to="/notfound" component={Errors} />

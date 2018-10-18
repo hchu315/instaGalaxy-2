@@ -4,8 +4,8 @@ import Feed from './feed';
 
 
 const mapStateToProps = (state) => ({
-  // debugger;
-  posts: Object.values(state.entities.posts)
+  posts: Object.values(state.entities.posts),
+  currentUser: state.entities.users[state.session.id]
 });
 
 const mapDispatchToProps = (dispatch) => ({

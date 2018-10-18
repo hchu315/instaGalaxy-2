@@ -22,7 +22,7 @@ export default() => {
           </div>
           <div className="menu-icons-container">
             <div className="menu-icons">
-              <Link to={""}><div className="upload-icon"/></Link>
+              <Link to={"/upload"}><div className="upload-icon"/></Link>
               <Link to={""}><div className="activity-icon"/></Link>
               <Link to={"/greeting"}><div className="user-icon" /></Link>
             </div>
