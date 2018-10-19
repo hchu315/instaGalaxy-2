@@ -3,10 +3,13 @@ import { fetchPosts } from '../../actions/post_actions';
 import Feed from './feed';
 
 
-const mapStateToProps = (state) => ({
-  posts: Object.values(state.entities.posts),
+const mapStateToProps = (state) =>  {
+  console.log(state)
+  return ({
+    posts: Object.values(state.entities.posts),
   currentUser: state.entities.users[state.session.id]
-});
+  })
+};
 
 const mapDispatchToProps = (dispatch) => ({
   fetchPosts: () => dispatch(fetchPosts())

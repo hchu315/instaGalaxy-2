@@ -1,0 +1,187 @@
+.user-page-container {
+  width: 100%;
+  height: 100vh;
+  // display: flex;
+}
+
+
+.user-page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.user-entire-feed {
+  // display: flex;
+  // justify-content: center;
+  // flex-direction: row;
+  // align-items: center;
+  height: 100%
+}
+
+.user-header-container {
+  display: flex;
+  // flex-direction: direction;
+  width: 935px;
+  height: 152px;
+  margin: 60px 20px 0;
+  margin-bottom: 44px;
+}
+
+.user-picture-container {
+  width: 292px;
+  height: 152px;
+}
+
+.user-info-container {
+  width: 613px;
+  height: 152px;
+}
+
+.user-picture-container {
+  display: flex;
+  justify-content: center;
+  margin-right: 30px;
+}
+
+.picture-img {
+   width: 152px;
+   height: 152px;
+   border-radius: 50%;
+}
+
+.user-info-container {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  // left: 0;
+  // top: 0;
+  // position: relative;
+  // justify-content: flex-start;
+}
+
+.user-settings-bar {
+  // position: relative;
+  display: flex;
+  // align-items: flex-start;
+  // justify-content: flex-start;
+}
+
+.user-page-username {
+  // position: absolute;
+  font-size: 28px;
+  font-weight: 100;
+  // font-family: sans-serif;
+  // top: 0px;
+  // left: 0px;
+}
+
+.edit-profile-button-container {
+  margin-left: 20px;
+}
+
+.edit-profile-button {
+  // background-color: #3897f0;
+  background-color: transparent;
+  border: 1px solid #dbdbdb;
+  color: #262626;
+  padding: 5px 9px;
+  font-weight: 600;
+  line-height: 18px;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+.account-settings-icon-container {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  margin-left: 4px;
+  // align-items: center;
+}
+
+//comment back in for bb8 icon
+.account-settings-icon {
+  // background-image: image_url('bb8-icon.png');
+  background-size: 32px 32px;
+  width: 32px;
+  height: 32px;
+  border: 0;
+  border-radius: 10px;
+  // border: hidden;
+}
+
+.account-settings-icon2 {
+  background-size: 32px 32px;
+  width: 32px;
+  height: 32px;
+  border: 0;
+  border-radius: 10px;
+}
+//added for modal icon
+
+// .modal-icon {
+  // background-image: image_url('bb8-icon.png');
+  // background-size: 28px 28px;
+  // width: 28px;
+  // height: 28px;
+// }
+
+.posts-follows-stats-container {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  // align-items: space-around;
+  // justify-content: space-around;
+  padding-left: 0;
+  left: 0;
+  margin-bottom: 20px;
+}
+
+.post-follows-stats {
+  margin-right: 40px;
+}
+
+.numbers {
+  font-weight: 550;
+}
+
+.fullname-bio-container {
+  height: 48px;
+  // font-size: 12px;
+  font-weight: bold;
+}
+
+.intermediate-bar {
+  width: 935px;
+  height: 53px;
+  border-top: 1px solid #efefef
+}
+
+.personal-album-container {
+  width: 935px;
+  height: 100%;
+  margin-right: 0;
+}
+
+.personal-album-inner-container {
+  display: flex;
+  flex-wrap: wrap;
+  // justify-content: flex-start
+  justify-content: space-around;
+  // align-items: flex-start;
+  img {
+    // width: 33%;
+    width: 293px;
+    height: 293px;
+    margin-bottom: 28px;
+    // height: auto;
+  }
+}
+// background-image: image_url('temp_prof_pic.png');
+// background-size: 30px 30px;
+// margin: 0 10px;
+// width: 30px;
+// height: 30px;

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 
 export default() => {
   return (
+    <div>
     <nav className="nav-bar">
       <div className="inner-nav-bar">
         <div className="nav-items">
@@ -17,6 +18,7 @@ export default() => {
           </div>
           <div className="search-bar-container">
             <div className="search-bar">
+              <div className="search-icon"/>
               <span className="search-text">Search</span>
             </div>
           </div>
@@ -30,6 +32,8 @@ export default() => {
         </div>
       </div>
     </nav>
+    <div id='nav-space'></div>
+  </div>
   );
 };
 

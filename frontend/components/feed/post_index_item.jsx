@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+const Timestamp = require('react-timestamp');
 
 const PostIndexItem = ({ post }) => (
   <section className="feed-scroll">
@@ -34,13 +35,18 @@ const PostIndexItem = ({ post }) => (
         </section>
         <section className="likes-count"></section>
         <div className="comments-container">
-          <ul>
+          <ul className="poster-comment-container">
+            <span className="post-author">
+              {post.author}</span>
+            <div className='user-caption-wrapper'>
             <li className="user-caption">
               {post.post_caption}
             </li>
+          </div>
           </ul>
         </div>
         <div className="time-of-post">
+          <Timestamp time={post.created_at} actualSeconds format='date' />
         </div>
         <section className="comment-box"></section>
       </div>

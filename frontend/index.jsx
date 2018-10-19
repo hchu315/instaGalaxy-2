@@ -10,9 +10,9 @@ document.addEventListener("DOMContentLoaded", () => {
   if (window.currentUser1) {
     const preloadedState = {
       entities: {
-        users: { [window.currentUser1.id]: window.currentUser1 }
+        users: { [window.currentUser1.user.id]: window.currentUser1.user }
       },
-      session: { id: window.currentUser1.id }
+      session: { id: window.currentUser1.user.id }
     };
     store = configureStore(preloadedState);
     delete window.currentUser1;

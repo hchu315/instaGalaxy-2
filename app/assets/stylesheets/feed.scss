@@ -1,5 +1,5 @@
 .feed {
-  margin-top: 60px;
+  margin-top: 50px;
   // display: flex;
   // flex-direction: row;
 }
@@ -7,7 +7,7 @@
 .feed-container {
   display: flex;
   flex-direction: row;
-  margin: 60px;
+  // margin: 60px;
 }
 
 .feed-scroll {
@@ -58,7 +58,7 @@
 
 .post-footer-container {
   width: 614px;
-  height: 316px;
+  height: 216px;
 }
 
 
@@ -93,6 +93,41 @@
   margin: 6px 10px;
 }
 
+
+.poster-comment-container {
+  display: flex;
+  padding: 16px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  // margin: 0;
+  // flex-direction: flex-start;
+  // width: 40px;
+  // height: 18px;
+}
+//
+.post-author {
+  font-weight: 600;
+  text-transform: lowercase;
+  // width: auto;
+  // margin-right: 20px;
+}
+//
+.user-caption {
+  // padding: 16px;
+  list-style-type: none;
+  padding: 5px;
+}
+
+// .user-caption-wrapper {
+//   min-width:
+// }
+
+.time-of-post {
+  width: 582px;
+  height: 19px;
+  padding: 16px;
+}
 // SIDE NAV STARTS HERE
 
 .side-nav-container {

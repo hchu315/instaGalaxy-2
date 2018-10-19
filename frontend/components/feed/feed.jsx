@@ -11,7 +11,7 @@ class Feed extends React.Component {
   }
 
   render() {
-    const posts = this.props.posts.map(post =>
+    const posts = this.props.posts.reverse().map(post =>
       <PostIndexItem key={post.id} post={post}  />
     );
     return (

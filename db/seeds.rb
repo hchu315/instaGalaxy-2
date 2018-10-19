@@ -25,11 +25,10 @@ end
     post.image.attach(io: File.open("/Users/Henry/Documents/instagalaxy_album/users/#{num}.jpg"), filename: "#{num}.jpg")
 end
 
-
-
-Demo_User = User.create!( {username: "Demo_User", email: "ItsADemo@demo.com", full_name: "Darth User", password: "demo_user"} )
+Demo_User = User.create!( {username: "Demo_User", email: "ItsADemo@demo.com", full_name: "Darth User", password: "demo_user", bio: "Welcome to InstaGalaxy :)"} )
 
 Demo_User.image.attach(io: File.open("/Users/Henry/Documents/instagalaxy_album/cool_guys.jpg"), filename: "cool_guys.jpg")
+
 
 # in times loop, pass i,
 #

@@ -1,5 +1,5 @@
 json.array! @posts do |post|
-  json.extract! post, :id, :user_id, :post_caption
+  json.extract! post, :id, :user_id, :post_caption, :created_at
   json.photoUrl url_for(post.image)
   json.author post.user.username
   # json.image url_for(post.user.image)

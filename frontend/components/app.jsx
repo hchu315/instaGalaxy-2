@@ -17,8 +17,6 @@ import Errors from './errors/error';
 // import Modal from './modal/modal';
 import { AuthRoute, ProtectedRoute } from '../utils/route_utils';
 
-
-
 // change login to main and flex boxed it to column
 const App = () => (
   <div className="main">
