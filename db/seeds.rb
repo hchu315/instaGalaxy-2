@@ -15,6 +15,7 @@
     password: Faker::Internet.password(8)
     })
     user.image.attach(io: File.open("#{Rails.root}/app/assets/images/instagalaxy_album/users_page/#{i}.png"), filename: "#{i}.png")
+    sleep(3)
     user.save
 end
 
@@ -24,12 +25,16 @@ end
     post_caption: Faker::StarWars.unique.quote
     })
     post.image.attach(io: File.open("#{Rails.root}/app/assets/images/instagalaxy_album/users/#{num}.jpg"), filename: "#{num}.jpg")
+    sleep(3)
     post.save
 end
 
-Demo_User = User.create!( {username: "Demo_User", email: "ItsADemo@demo.com", full_name: "Darth User", password: "demo_user", bio: "Welcome to InstaGalaxy :)"} )
+demo_user = User.create!( {username: "Demo_User", email: "ItsADemo@demo.com", full_name: "Darth User", password: "demo_user", bio: "Welcome to InstaGalaxy :)"} )
 
-Demo_User.image.attach(io: File.open("#{Rails.root}/app/assets/images/instagalaxy_album/demo_user/cool_guys.jpg"), filename: "cool_guys.jpg")
+demo_user.image.attach(io: File.open("#{Rails.root}/app/assets/images/instagalaxy_album/demo_user/cool_guys.jpg"), filename: "cool_guys.jpg")
+
+sleep(3)
+demo_user.save
 
 demo1 = Post.create({
     user_id: 11,
@@ -37,7 +42,7 @@ demo1 = Post.create({
   })
 
 demo1.image.attach(io: File.open("#{Rails.root}/app/assets/images/instagalaxy_album/demo_user/9.png"), filename: "9.png")
-
+sleep(3)
 demo1.save
 
 demo2 = Post.create({
@@ -46,14 +51,14 @@ demo2 = Post.create({
   })
 
 demo2.image.attach(io: File.open("#{Rails.root}/app/assets/images/instagalaxy_album/demo_user/10.jpg"), filename: "10.jpg")
-
+sleep(3)
 demo2.save
 
 demo3 = Post.create({
     user_id: 11,
-    post_caption: "Wiseguys Stormtroopers"
+    post_caption: "Wiseguy Stormtroopers"
   })
 
 demo3.image.attach(io: File.open("#{Rails.root}/app/assets/images/instagalaxy_album/demo_user/cool_guys.jpg"), filename: "cool_guys.jpg")
-
+sleep(3)
 demo3.save
