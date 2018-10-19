@@ -14,7 +14,8 @@
     full_name: Faker::StarWars.vehicle,
     password: Faker::Internet.password(8)
     })
-    user.image.attach(io: File.open("/Users/Henry/Documents/instagalaxy_album/users_page/#{i}.png"), filename: "#{i}.png")
+    user.image.attach(io: File.open("#{Rails.root}/app/assets/images/instagalaxy_album/users_page/#{i}.png"), filename: "#{i}.png")
+    user.save
 end
 
 10.times do |num|
@@ -22,16 +23,37 @@ end
     user_id: Faker::Number.unique.between(1, 10),
     post_caption: Faker::StarWars.unique.quote
     })
-    post.image.attach(io: File.open("/Users/Henry/Documents/instagalaxy_album/users/#{num}.jpg"), filename: "#{num}.jpg")
+    post.image.attach(io: File.open("#{Rails.root}/app/assets/images/instagalaxy_album/users/#{num}.jpg"), filename: "#{num}.jpg")
+    post.save
 end
 
 Demo_User = User.create!( {username: "Demo_User", email: "ItsADemo@demo.com", full_name: "Darth User", password: "demo_user", bio: "Welcome to InstaGalaxy :)"} )
 
-Demo_User.image.attach(io: File.open("/Users/Henry/Documents/instagalaxy_album/cool_guys.jpg"), filename: "cool_guys.jpg")
+Demo_User.image.attach(io: File.open("#{Rails.root}/app/assets/images/instagalaxy_album/demo_user/cool_guys.jpg"), filename: "cool_guys.jpg")
 
+demo1 = Post.create({
+    user_id: 11,
+    post_caption: "Issa trap!"
+  })
 
-# in times loop, pass i,
-#
-# 10.times do |i|
-#   user = USer.create
-#   user.photo.attach(io: File.open(""))
+demo1.image.attach(io: File.open("#{Rails.root}/app/assets/images/instagalaxy_album/demo_user/9.png"), filename: "9.png")
+
+demo1.save
+
+demo2 = Post.create({
+    user_id: 11,
+    post_caption: "Don't hate us cause you ain't us"
+  })
+
+demo2.image.attach(io: File.open("#{Rails.root}/app/assets/images/instagalaxy_album/demo_user/10.jpg"), filename: "10.jpg")
+
+demo2.save
+
+demo3 = Post.create({
+    user_id: 11,
+    post_caption: "Wiseguys Stormtroopers"
+  })
+
+demo3.image.attach(io: File.open("#{Rails.root}/app/assets/images/instagalaxy_album/demo_user/cool_guys.jpg"), filename: "cool_guys.jpg")
+
+demo3.save
