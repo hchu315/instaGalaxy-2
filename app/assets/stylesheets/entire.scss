@@ -1,5 +1,5 @@
 #root {
-  background-color: #fafafa;
+  // background-color: #fafafa;
   height: 100vh;
 }
 
@@ -66,9 +66,18 @@
 
 .form-input-container {
   // background-color: purple;
-  display: flex;
-  justify-content: center;
+  // display: flex;
+  // flex-direction: row;
+  // justify-content: center;
   height: 239px;
+}
+
+.form-input-inner-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // justify-content: center;
 }
 
 .username-input-container {
@@ -169,7 +178,49 @@
 //   position: relative;
 // }
 
-.forgot-password2 {
+
+.divider-container {
+  display: flex;
+  margin: 10px 40px 18px;
+  width: auto;
+}
+
+.divider-line {
+  display: flex;
+  flex-direction: row;
+  background-color: #efefef;
+  width: 106px;
+  height: 1px;
+  position: relative;
+  top: .45em;
+}
+
+.divider-or {
+  width: 19px;
+  color: #999;
+  font-weight: 600;
+  margin: 0 18px;
+  text-transform: uppercase;
+  line-height: 15px;
+  font-size: 13px;
+}
+
+.facebook-link-container {
+
+}
+
+.fb-icon {
+  background-image: image_url('FB-icon.png');
+  background-size: 16px 16px;
+  width: 16px;
+  height: 16px;
+}
+
+.fb-icon-text {
+
+}
+
+.forgot-password {
   text-decoration: none;
   font-size: 12px;
   line-height: 14px;

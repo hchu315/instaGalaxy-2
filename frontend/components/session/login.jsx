@@ -38,7 +38,7 @@ class Login extends React.Component {
             <div className="login-form-container">
               <h1 className="login-form-header">instaGalaxy</h1>
               <div className="form-input-container">
-                <form onSubmit={this.handleSubmit}>
+                <form className="form-input-inner-container" onSubmit={this.handleSubmit}>
                   <div className="username-input-container">
                     <label>
                       <input className="username-input" type="text" value={this.state.username} onChange={this.handleInput("username")}
@@ -54,7 +54,14 @@ class Login extends React.Component {
                   <div className="login-button-container">
                     <input className="login-button" type='submit' value='Log in' />
                   </div>
-                  <a className="forgot-password2" href="">Forgot password?</a>
+                  <div className="divider-container">
+                    <div className="divider-line"></div>
+                    <div className="divider-or">or</div>
+                    <div className="divider-line"></div>
+                  </div>
+                  <a className="forgot-password" href="">Forgot password?</a>
+                  <div className="facebook-link-container">
+                  </div>
                 </form>
               </div>
             </div>
@@ -84,3 +91,8 @@ class Login extends React.Component {
 }
 
 export default Login;
+
+// <button>
+//   <span className="fb-icon">
+//   </span>
+// </button>
