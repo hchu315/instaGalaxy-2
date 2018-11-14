@@ -10,6 +10,11 @@ class Feed extends React.Component {
     this.props.fetchPosts();
   }
 
+  handleLike(e){
+    e.preventDefault();
+    
+  }
+
   render() {
     const posts = this.props.posts.reverse().map(post =>
       <PostIndexItem key={post.id} post={post}  />
