@@ -23,6 +23,7 @@ class User < ApplicationRecord
 
   # add associations later
   has_many :posts
+  has_many :likes
   has_one_attached :image
 
   def self.find_by_credentials(username, password)

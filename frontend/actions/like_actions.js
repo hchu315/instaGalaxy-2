@@ -20,5 +20,3 @@ export const createLike = (postId) => dispatch => (
 export const deleteLike = (postId) => dispatch => (
   LikeAPIUtil.deleteLike(postId).then(like => dispatch(removeLike(like)))
 );
-
-// passing postId / like in params necessary?

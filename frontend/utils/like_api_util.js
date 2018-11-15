@@ -1,11 +1,11 @@
-export const createLike = () => (
+export const createLike = (postId) => (
   $.ajax({
     method: 'POST',
-    url: 'api/likes'
+    url: 'api/likes',
+    data: postId
   })
 );
 
-// pass postId as data to create?
 
 export const deleteLike = (postId) => {
   $.ajax({

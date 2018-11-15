@@ -5,20 +5,25 @@ import NavBar from '../nav_bar/nav_bar';
 import Footer from '../footer/footer';
 
 class Feed extends React.Component {
+  constructor(props){
+    super(props);
+    this.handleLike = this.handleLike.bind(this);
+  }
 
   componentDidMount(){
     this.props.fetchPosts();
   }
 
   handleLike(e){
-    e.preventDefault();
     
   }
 
   render() {
     const posts = this.props.posts.reverse().map(post =>
-      <PostIndexItem key={post.id} post={post}  />
+      <PostIndexItem key={post.id} post={post} handleLike={this.handleLike} />
     );
+
+    console.log(posts[0])
     return (
       <section>
         <NavBar/>
