@@ -7,23 +7,39 @@ import Footer from '../footer/footer';
 class Feed extends React.Component {
   constructor(props){
     super(props);
-    this.handleLike = this.handleLike.bind(this);
+    // this.handleLike = this.handleLike.bind(this);
+    this.createLike = this.props.createLike;
+    this.deleteLike = this.props.deleteLike;
+    this.currentUser = this.props.currentUser;
+    // console.log(this.props)
   }
 
   componentDidMount(){
     this.props.fetchPosts();
   }
 
-  handleLike(e){
-    
-  }
+  // handleLike(e){
+  //   // console.log('i think it worked');
+  //   // console.log(this.props)
+  //   // console.log(e)
+  //   // e.preventDefault();
+  //   // console.log('it worked!');
+  //   // console.log(this.props)
+  //
+  //   if (this.props.post.liked) {
+  //     this.props.deleteLike(this.props.post.id);
+  //   } else {
+  //     this.props.createLike(this.props.post.id);
+  //   }
+  // }
 
   render() {
     const posts = this.props.posts.reverse().map(post =>
-      <PostIndexItem key={post.id} post={post} handleLike={this.handleLike} />
+      <PostIndexItem key={post.id} post={post}  createLike={this.createLike} deleteLike={this.deleteLike}
+      currentUser={this.currentUser} />
     );
 
-    console.log(posts[0])
+    // console.log(this.props)
     return (
       <section>
         <NavBar/>

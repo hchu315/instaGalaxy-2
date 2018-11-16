@@ -3,14 +3,14 @@ import * as LikeAPIUtil from '../utils/like_api_util';
 export const RECEIVE_LIKE = "RECEIVE_LIKE";
 export const REMOVE_LIKE = "REMOVE_LIKE";
 
-const receiveLike = () => ({
+const receiveLike = like => ({
   type: RECEIVE_LIKE,
   like
 })
 
-const removeLike = (post) => ({
+const removeLike = (like) => ({
   type: REMOVE_LIKE,
-  postId: post.id
+  like
 })
 
 export const createLike = (postId) => dispatch => (

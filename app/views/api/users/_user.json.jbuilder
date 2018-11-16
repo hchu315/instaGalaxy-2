@@ -1,7 +1,7 @@
 json.user do
   json.extract! user, :id, :username, :full_name, :email
   json.photoUrl url_for(user.image)
-  json.posts user.posts.map { |post| post.id}
+  json.posts user.posts.map { |post| post.id }
 end
 # json.testing
 

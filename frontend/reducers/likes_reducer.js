@@ -3,6 +3,7 @@ import merge from 'lodash/merge';
 
 const likesReducer = (oldState = {}, action) => {
   Object.freeze(oldState);
+  debugger
   switch (action.type) {
     case RECEIVE_LIKE:
       return merge({}, oldState, {[action.postId]:})
@@ -12,3 +13,5 @@ const likesReducer = (oldState = {}, action) => {
       return oldState;
   }
 };
+
+export default likesReducer
