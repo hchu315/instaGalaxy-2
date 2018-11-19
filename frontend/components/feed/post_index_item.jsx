@@ -8,6 +8,7 @@ class PostIndexItem extends React.Component {
     // let post = this.props.post;
     // console.log(this.props.post)
     this.handleLike = this.handleLike.bind(this);
+    this.handleKey = this.handleKey.bind(this);
     this.deleteLike = this.props.deleteLike;
     this.createLike = this.props.createLike;
   }
@@ -23,7 +24,12 @@ class PostIndexItem extends React.Component {
     }
   }
 
+  handleKey(e){
+    console.log(e.keyCode);
+  }
+
   render(){
+    // console.log(this.props.post.liked)
 
     return (
     <section className="feed-scroll">
@@ -56,7 +62,9 @@ class PostIndexItem extends React.Component {
               </button>
             </span>
           </section>
-          <section className="likes-count"></section>
+          <section className="likes-count-container">
+            <div className="likes-count"> { this.props.post.likesCount } { this.props.post.likesCount > 1 ? 'likes' : 'like' }</div>
+          </section>
           <div className="comments-container">
             <ul className="poster-comment-container">
               <span className="post-author">
@@ -71,7 +79,13 @@ class PostIndexItem extends React.Component {
           <div className="time-of-post">
             <Timestamp time={this.props.post.created_at} actualSeconds format='date' />
           </div>
-          <section className="comment-box"></section>
+          <section className="comment-box-container">
+            <div className="comment-box">
+              <form className="comment-form" >
+                <textarea aria-label="Add a comment..." className="comments" placeholder="Add a comment..." onKeyDown={ this.handleKey }></textarea>
+              </form>
+            </div>
+          </section>
         </div>
         <div className="misc-post-functions"></div>
       </article>
