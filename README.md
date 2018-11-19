@@ -40,7 +40,6 @@ InstaGalaxy was built using Ruby on Rails for the backend, PostGreSQL serving as
 
 1) User Authentication - Secure user authentication with BCrypt that allows an user to sign up, login, and logout.
 
-![Login Page](https://instagalaxy.herokuapp.com/#/)
 ```ruby
 def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
@@ -59,5 +58,7 @@ def self.find_by_credentials(username, password)
 
 2) User Uploads - Allows an user to upload images and add an optional caption to the image.
 3) User Follows - Allows an user to follow their friends and family, or favorite users. (In progress)
-4) User Likes - Allows an user to like their favorite photo at the click of a button
-5) User Comments - Allows an user to leave comments on photos
+4) User Likes - Allows an user to like their favorite photo at the click of a button.
+5) User Comments - Allows an user to leave comments on photos. (In progress)
+
+![feed page]()
