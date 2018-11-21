@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import CommentForm from './comment/comment_form';
 const Timestamp = require('react-timestamp');
 
 class PostIndexItem extends React.Component {
@@ -8,9 +9,10 @@ class PostIndexItem extends React.Component {
     // let post = this.props.post;
     // console.log(this.props.post)
     this.handleLike = this.handleLike.bind(this);
-    this.handleKey = this.handleKey.bind(this);
+    // this.handleKey = this.handleKey.bind(this);
     this.deleteLike = this.props.deleteLike;
     this.createLike = this.props.createLike;
+    this.createComment = this.props.createComment;
   }
 
   handleLike(e){
@@ -22,10 +24,6 @@ class PostIndexItem extends React.Component {
     } else {
       this.createLike(this.props.post.id);
     }
-  }
-
-  handleKey(e){
-    console.log(e.keyCode);
   }
 
   render(){
@@ -79,13 +77,10 @@ class PostIndexItem extends React.Component {
           <div className="time-of-post">
             <Timestamp time={this.props.post.created_at} actualSeconds format='date' />
           </div>
-          <section className="comment-box-container">
-            <div className="comment-box">
-              <form className="comment-form" >
-                <textarea aria-label="Add a comment..." className="comments" placeholder="Add a comment..." onKeyDown={ this.handleKey }></textarea>
-              </form>
-            </div>
-          </section>
+          <CommentForm
+            createComment={this.props.createComment}
+            postId={this.props.post.id}
+          />
         </div>
         <div className="misc-post-functions"></div>
       </article>

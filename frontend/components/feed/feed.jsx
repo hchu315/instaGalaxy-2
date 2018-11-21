@@ -7,11 +7,10 @@ import Footer from '../footer/footer';
 class Feed extends React.Component {
   constructor(props){
     super(props);
-    // this.handleLike = this.handleLike.bind(this);
     this.createLike = this.props.createLike;
     this.deleteLike = this.props.deleteLike;
     this.currentUser = this.props.currentUser;
-    // console.log(this.props)
+    this.createComment = this.props.createComment;
   }
 
   componentDidMount(){
@@ -36,10 +35,11 @@ class Feed extends React.Component {
   render() {
     const posts = this.props.posts.reverse().map(post =>
       <PostIndexItem key={post.id} post={post}  createLike={this.createLike} deleteLike={this.deleteLike}
-      currentUser={this.currentUser} />
+      currentUser={this.currentUser}
+      createComment={this.createComment}
+      />
     );
 
-    // console.log(this.props)
     return (
       <section>
         <NavBar/>

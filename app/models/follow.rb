@@ -10,4 +10,6 @@
 #
 
 class Follow < ApplicationRecord
+
+
 end
