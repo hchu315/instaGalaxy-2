@@ -5,6 +5,7 @@ const commentsReducer = (oldState = {}, action) => {
   Object.freeze(oldState);
   switch(action.type) {
     case RECEIVE_COMMENT:
+      // debugger
       return merge({}, oldState, action.comment);
     default:
       return oldState;

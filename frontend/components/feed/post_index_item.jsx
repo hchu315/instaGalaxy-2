@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import CommentForm from './comment/comment_form';
+// import Comment from './comment/comment_form';«»
+import CommentContainer from './comment/comment_container'
 const Timestamp = require('react-timestamp');
 
 class PostIndexItem extends React.Component {
@@ -77,8 +78,7 @@ class PostIndexItem extends React.Component {
           <div className="time-of-post">
             <Timestamp time={this.props.post.created_at} actualSeconds format='date' />
           </div>
-          <CommentForm
-            createComment={this.props.createComment}
+          <CommentContainer
             postId={this.props.post.id}
           />
         </div>
@@ -88,4 +88,5 @@ class PostIndexItem extends React.Component {
     </section>
   )}
 }
+
 export default PostIndexItem;

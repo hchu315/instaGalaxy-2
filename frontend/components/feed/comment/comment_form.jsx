@@ -12,6 +12,10 @@ class Comment extends React.Component {
     this.handleKey = this.handleKey.bind(this);
   }
 
+  componentDidMount(){
+    // this.props.fetchComments();
+  }
+
   handleKey(e){
     const commentBody = this.state.commentBody;
     // this.setState({ commentBody: e.target.value});
