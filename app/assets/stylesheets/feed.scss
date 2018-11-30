@@ -133,7 +133,11 @@
 .poster-comment-container {
   display: flex;
   padding: 16px 0px;
-  align-items: center;
+  // text-align: center;
+  // justify-content: center;
+  // align-self: center;
+  // align-content: center;
+  // align-items: center;
   // justify-content: flex-start;
   // flex-wrap: wrap;
   // margin: 0;
@@ -146,6 +150,13 @@
   font-weight: 600;
   text-transform: lowercase;
   margin-left: 12px;
+  text-align: center;
+  padding-top: 5px;
+  padding-right: 5px;
+}
+
+.user-caption-wrapper {
+  text-align: center;
 }
 
 .user-caption {
@@ -154,9 +165,6 @@
   padding: 5px;
 }
 
-// .user-caption-wrapper {
-//   min-width:
-// }
 
 .time-of-post {
   width: 582px;

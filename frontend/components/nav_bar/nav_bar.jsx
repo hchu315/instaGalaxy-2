@@ -19,7 +19,7 @@ export default() => {
           <div className="search-bar-container">
             <div className="search-bar">
               <div className="search-icon"/>
-              <span className="search-text">Search</span>
+              <span className="search-text">Welcome Demo User!</span>
             </div>
           </div>
           <div className="menu-icons-container">

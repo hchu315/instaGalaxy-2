@@ -11,6 +11,7 @@ class Feed extends React.Component {
     this.deleteLike = this.props.deleteLike;
     this.currentUser = this.props.currentUser;
     this.createComment = this.props.createComment;
+    this.fetchComments = this.props.fetchComments;
   }
 
   componentDidMount(){
@@ -60,7 +61,7 @@ class Feed extends React.Component {
               </div>
               <div className="stories-header">
                 <span className="stories-text">Stories</span>
-                <span className="watchall-text">Watch All</span>
+                <span className="watchall-text">In Progress!</span>
               </div>
               <div className="stories"></div>
               <div className="side-nav-footer">

@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import Footer from '../footer/footer';
 
 class Signup extends React.Component {
   constructor(props) {
@@ -32,35 +34,77 @@ class Signup extends React.Component {
 
   render(){
     return (
-      <div className="session-form">
-        <h3>
-          Sign up to see photos and <br/>videos from your friends.
-        </h3>
-        <form>
-          <label>
-            Email:
-            <input type="text" value={this.state.email} onChange={this.handleInput("email")}/>
-          </label>
-          <br/>
-          <label>
-            Full Name:
-            <input type="text" value={this.state.full_name} onChange={this.handleInput("full_name")}/>
-          </label>
-          <br/>
-          <label>
-            Username:
-            <input type="text" value={this.state.username} onChange={this.handleInput("username")}/>
-          </label>
-          <br/>
-          <label>
-            Password:
-            <input type="password" value={this.state.password} onChange={this.handleInput("password")}/>
-          </label>
-          <br/>
-          <button onClick={this.handleSubmit}>Sign Up</button>
-        </form>
-
-        <button onClick={this.handleDemo}>Log in as Demo User</button>
+      <div className="full-session-container">
+      <div className="session-form-container">
+        <div className="session-form">
+          <div className="session-signup-container">
+            <h1 className="signup-form-header">
+              InstaGalaxy
+            </h1>
+            <h2 className="signup-text">
+              Sign up to see photos and <br/>videos from your friends.
+            </h2>
+            <div className="signup-demo-button-container">
+              <button onClick={this.handleDemo} className="signup-demo-button">Log in with Demo User</button>
+            </div>
+            <div className="border-or-border">
+              <div className="signup-border-one"></div>
+              <div className="signup-or-text">OR</div>
+              <div className="signup-border-two"></div>
+            </div>
+            <form>
+              <div className="signin-input-boxes">
+                <div className="signup-box">
+                  <input className="signup-input-text" type="text"
+                    placeholder="Email"
+                    value={this.state.email}
+                  onChange={this.handleInput("email")}/>
+                </div>
+              </div>
+              <div className="signin-input-boxes">
+                <div className="signup-box">
+                  <input className="signup-input-text" type="text"
+                    placeholder="Full Name"
+                    value={this.state.full_name}
+                    onChange={this.handleInput("full_name")}/>
+                </div>
+              </div>
+              <div className="signin-input-boxes">
+                <div className="signup-box">
+                  <input className="signup-input-text" type="text"
+                    placeholder="Username"
+                    value={this.state.username} onChange={this.handleInput("username")}/>
+                </div>
+              </div>
+              <div className="signin-input-boxes">
+                <div className="signup-box">
+                  <input className="signup-input-text"
+                     type="password"
+                     placeholder="Password"
+                     value={this.state.password} onChange={this.handleInput("password")}/>
+                </div>
+              </div>
+              <div className="signup-demo-button-container">
+              <button className="signup-demo-button" onClick={this.handleSubmit}>Sign Up</button>
+              </div>
+              <p className="signup-disclosure-container"><span>By signing up, you agree to our</span>
+                <span>Terms, Data Policy and Cookies</span>
+                <span>Policy.</span>
+              </p>
+            </form>
+        </div>
+        <div className="session-signup-container session-login-container">
+          <span className="session-login">Have an account?
+            <Link className="signup-login-link" to={'/'}> Log in</Link>
+          </span>
+        </div>
+        <div className="session-links-container">
+          <span>Get the app.</span>
+        </div>
+        <div className="something"></div>
+      </div>
+      </div>
+      <Footer />
       </div>
     )
 

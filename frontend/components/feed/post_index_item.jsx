@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 // import Comment from './comment/comment_form';«»
 import CommentContainer from './comment/comment_container'
+import CommentIndexItem from './comment/comment_index_item';
 const Timestamp = require('react-timestamp');
 
 class PostIndexItem extends React.Component {
@@ -72,6 +73,8 @@ class PostIndexItem extends React.Component {
               <li className="user-caption">
                 {this.props.post.post_caption}
               </li>
+              <ul className='post-comments'>
+              </ul>
             </div>
             </ul>
           </div>

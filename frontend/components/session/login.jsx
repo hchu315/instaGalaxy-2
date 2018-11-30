@@ -69,7 +69,7 @@ class Login extends React.Component {
               <div className="signup-text-container">
                 <span className="inner-signup-text-container">
                   <p>Don't have an account?</p>
-                  <Link className="signup-text" to={'/signup'}>&nbsp;Sign up</Link>
+                  <Link className="login-signup-text" to={'/signup'}>&nbsp;Sign up</Link>
                 </span>
                 <button className="demo-button" onClick={this.handleDemo}>Log in as Demo User</button>
               </div>

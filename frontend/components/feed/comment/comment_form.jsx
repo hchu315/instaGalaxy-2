@@ -6,15 +6,16 @@ class Comment extends React.Component {
     this.state = {
       commentBody: ''
     }
+    // debugger;
     this.createComment = this.props.createComment;
     // console.log(this.props)
     this.postId = this.props.postId;
     this.handleKey = this.handleKey.bind(this);
   }
 
-  componentDidMount(){
-    // this.props.fetchComments();
-  }
+  // componentDidMount(){
+  //   this.props.fetchComments();
+  // }
 
   handleKey(e){
     const commentBody = this.state.commentBody;
@@ -34,6 +35,8 @@ class Comment extends React.Component {
   }
 
   render() {
+    // const comments = this.props.comments.map(comment => )
+    // debugger
     return (
       <section className="comment-box-container">
         <div className="comment-box">
