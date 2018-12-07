@@ -41,6 +41,7 @@ class Feed extends React.Component {
       />
     );
 
+    console.log(posts)
     return (
       <section>
         <NavBar/>
