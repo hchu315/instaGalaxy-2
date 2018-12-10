@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from 'react-redux';
 import { fetchComments } from "../../../actions/comment_actions";
-import CommentIndexItem from "./comment_index_item";
+import CommentIndex from "./comment_index";
 
 const mapStateToProps = (state, ownProps) => {
   // console.log(ownProps)
@@ -15,4 +15,4 @@ const mapDispatchToProps = (dispatch) => ({
   fetchComments: () => dispatch(fetchComments())
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(CommentIndexItem);
+export default connect(mapStateToProps, mapDispatchToProps)(CommentIndex);

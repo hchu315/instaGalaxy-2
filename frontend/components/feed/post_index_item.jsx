@@ -67,17 +67,19 @@ class PostIndexItem extends React.Component {
           </section>
           <div className="comments-container">
             <ul className="poster-comment-container">
-              <span className="post-author">
-                {this.props.post.author}</span>
-              <div className='user-caption-wrapper'>
-              <li className="user-caption">
-                {this.props.post.post_caption}
+              <li>
+                <span className="post-author">
+                  {this.props.post.author}</span>
+                <div className='user-caption-wrapper'>
+                  <span className="user-caption">
+                    {this.props.post.post_caption}
+                  </span>
+                </div>
               </li>
-              <ul className='post-comments'>
-              </ul>
-            </div>
-            <CommentIndexContainer
-              postId={this.props.post.id}/>
+              <li className='post-comments'>
+                <CommentIndexContainer
+                  postId={this.props.post.id}/>
+              </li>
             </ul>
           </div>
           <div className="time-of-post">
