@@ -18,36 +18,20 @@ class Feed extends React.Component {
     this.props.fetchPosts();
   }
 
-  // handleLike(e){
-  //   // console.log('i think it worked');
-  //   // console.log(this.props)
-  //   // console.log(e)
-  //   // e.preventDefault();
-  //   // console.log('it worked!');
-  //   // console.log(this.props)
-  //
-  //   if (this.props.post.liked) {
-  //     this.props.deleteLike(this.props.post.id);
-  //   } else {
-  //     this.props.createLike(this.props.post.id);
-  //   }
-  // }
-
   render() {
-    const posts = this.props.posts.reverse().map(post =>
+    const posts = this.props.posts.map(post =>
       <PostIndexItem key={post.id} post={post}  createLike={this.createLike} deleteLike={this.deleteLike}
       currentUser={this.currentUser}
       createComment={this.createComment}
       />
     );
 
-    // console.log(posts)
     return (
       <section>
         <NavBar/>
           <div className="feed-container">
             <ul className="feed">
-              {posts}
+              {posts.reverse()}
             </ul>
             <div className="side-nav-container">
               <div className="side-user-nav">
