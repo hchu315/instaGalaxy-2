@@ -24,9 +24,9 @@ export default() => {
           </div>
           <div className="menu-icons-container">
             <div className="menu-icons">
-              <Link to={"/upload"}><div className="upload-icon"/></Link>
-              <Link to={""}><div className="activity-icon"/></Link>
-              <Link to={"/greeting"}><div className="user-icon" /></Link>
+              <Link to={"/upload"}><div className="upload-icon" title="Upload"/></Link>
+              <Link to={""}><div className="activity-icon" title="Feed"/></Link>
+              <Link to={"/greeting"}><div className="user-icon" title="User Profile"/></Link>
             </div>
           </div>
         </div>

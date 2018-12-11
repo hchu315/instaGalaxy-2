@@ -4,6 +4,7 @@ import { withRouter, Link } from 'react-router-dom';
 import NavBar from '../nav_bar/nav_bar';
 // import Modal from '../modal/modal';
 import ReactDOM from 'react-dom';
+import Footer from '../footer/footer';
 // import Modal from 'react-modal';
 
 class Greeting extends React.Component {
@@ -59,7 +60,7 @@ class Greeting extends React.Component {
                   </Link>
                   <div className="account-settings-icon-container">
                     <div className="account-settings-icon">
-                      <input className="account-settings-icon2" onClick={this.logoutHandler.bind(this)}
+                      <input className="account-settings-icon2" onClick={this.logoutHandler.bind(this)} title="Logout"
                         src="https://cdn.dribbble.com/users/966/screenshots/2262572/bb-8.png" type="image"/>
                       <div>
                       </div>
@@ -89,7 +90,7 @@ class Greeting extends React.Component {
           </div>
 
         </div>
-
+        <Footer />
       </div>
   )}
 }

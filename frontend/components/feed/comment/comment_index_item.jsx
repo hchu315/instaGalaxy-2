@@ -2,10 +2,15 @@ import React from 'react';
 
 const CommentIndexItem = ({ postId, comment }) => {
   return (
-    <div>
-      { (postId === post.id) ?
-        comment.body : ''
-      }
+    <div className="post-comment">
+      <span className="comment-author">
+        { (postId === comment.post_id) ? comment.user_id : '' }
+      </span>
+      <span className="comment-body">
+        { (postId === comment.post_id) ?
+          comment.body : ''
+        }
+      </span>
     </div>
   );
 };

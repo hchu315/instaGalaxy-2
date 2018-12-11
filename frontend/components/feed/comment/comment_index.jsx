@@ -13,27 +13,20 @@ class CommentIndex extends React.Component {
 
   render(){
     let comments = this.props.comments.map(comment => {
-      <CommentIndexItem comment={comment}
-        postId={this.props.postId}
-      />
-      // if (this.props.postId === comment.post_id){
-      // }
-    })
+      if (this.props.postId === comment.post_id){
+        return <CommentIndexItem
+            comment={comment}
+            postId={this.props.postId}
+          />;
 
-    // console.log(comments)
+      }
+    }
+  )
+  // console.log(comments)
 
     return (
     <div>
-      <div>
-        <div>
-          <h3>
-
-          </h3>
-          <span>
-            <span>{ comments }</span>
-          </span>
-        </div>
-      </div>
+      { comments }
     </div>
   )};
 }

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import Comment from './comment/comment_form';«»
 import CommentContainer from './comment/comment_container'
 import CommentIndexContainer from './comment/comment_index_container';
 const Timestamp = require('react-timestamp');
@@ -67,7 +66,7 @@ class PostIndexItem extends React.Component {
           </section>
           <div className="comments-container">
             <ul className="poster-comment-container">
-              <li>
+              <li className="poster-comment">
                 <span className="post-author">
                   {this.props.post.author}</span>
                 <div className='user-caption-wrapper'>
