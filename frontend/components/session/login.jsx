@@ -33,7 +33,16 @@ class Login extends React.Component {
     return (
       <section className="login-page">
         <div className="full-form-container">
-          <div className="my_image"/>
+          <div className="my_image">
+            <div className="transitioning-images-container">
+              <div className="transitioning-image-1"/>
+              <div className="transitioning-image-2"/>
+              <div className="transitioning-image-3"/>
+              <div className="transitioning-image-4"/>
+              <div className="transitioning-image-5"/>
+
+            </div>
+          </div>
           <div className="login-links-form">
             <div className="login-form-container">
               <h1 className="login-form-header">instaGalaxy</h1>
