@@ -17,7 +17,7 @@ class Greeting extends React.Component {
     this.renderPosts = this.renderPosts.bind(this);
   }
 
-  componentDidMount() {
+  componentDidMount(){
     this.props.fetchPosts();
   }
 

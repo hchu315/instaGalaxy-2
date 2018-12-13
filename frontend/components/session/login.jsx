@@ -16,29 +16,23 @@ class Login extends React.Component {
 
 
   componentDidMount(){
-    setInterval(() => this.switchImage(), 2500);
+    this.timerId = setInterval(() => this.switchImage(), 2500);
   }
 
-  // testFunction(){
-  //   console.log('worked!');
-  // }
 
-  // var index = 1;
+  componentWillUnmount(){
+    clearInterval(this.timerId)
+  }
 
   switchImage(){
-    // if (this.state.index > 4) {
-    //   this.setState({index: this.state.index % 5});
-    //   $(`.transition-images, .transitioning-image-${this.state.index}`)
-    //       .toggleClass('fade-in');
-    //   } else {
-        // this.setState({index: this.state.index + 2});
-        $(`.transitioning-image-${this.state.index%5}`)
-          .toggleClass('fade-in');
-        $(`.transitioning-image-${(this.state.index-1)%5}`)
-          .toggleClass('fade-in').toggleClass('fade-out')
-        $(`.transitioning-image-${(this.state.index-2)%5}`)
-          .toggleClass('fade-out')
+      $(`.transitioning-image-${this.state.index%5}`)
+        .toggleClass('fade-in');
+      $(`.transitioning-image-${(this.state.index-1)%5}`)
+        .toggleClass('fade-in').toggleClass('fade-out')
+      $(`.transitioning-image-${(this.state.index-2)%5}`)
+        .toggleClass('fade-out');
 
+      // if (this.isMounted === true){
         this.setState({ index: (this.state.index + 1)});
       // }
   }
@@ -60,23 +54,6 @@ class Login extends React.Component {
   }
 
   render(){
-    // let index = 1;
-    //
-    // function switchImage(){
-    //   if (index > 4) {
-    //     $(`.transition-images, .transitioning-image-${index}`)
-    //       .toggleClass('fade-in');
-    //     index = 1;
-    //   } else {
-    //     $(`.transition-images, .transitioning-image-${index}`)
-    //       .toggleClass('fade-in');
-    //     index++;
-    //   }
-    // }
-
-    // setInterval(console.log('this worked?'), 1000);
-    // setInterval(switchImage(), 2000);
-
     return (
       <section className="login-page">
         <div className="full-form-container">
@@ -87,7 +64,6 @@ class Login extends React.Component {
               <div className="transition-images transitioning-image-2"/>
               <div className="transition-images transitioning-image-3"/>
               <div className="transition-images transitioning-image-4"/>
-
             </div>
           </div>
           <div className="login-links-form">

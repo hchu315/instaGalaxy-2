@@ -101,7 +101,6 @@ class Signup extends React.Component {
         <div className="session-links-container">
           <span>Get the app.</span>
         </div>
-        <div className="something"></div>
       </div>
       </div>
       <Footer />
