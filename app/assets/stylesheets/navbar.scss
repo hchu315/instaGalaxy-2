@@ -12,7 +12,6 @@
   right: 0;
   display: flex;
   height: 77px;
-  // width: 100%;
   z-index: 1;
   border-bottom: 1px solid rgba(0,0,0,.0975);
 }
@@ -20,56 +19,43 @@
 .inner-nav-bar {
   display: flex;
   justify-content: center;
-  // align-items: center;
   width: 100%;
 }
 
 .nav-items {
   display: flex;
   flex-direction: row;
-  // width: 100%;
-  // justify-content: center;
   align-items: center;
 }
 
 .feed-redirect {
   display: flex;
   width: 370px;
-  // justify-content: space-between;
-  // flex-direction: row;
-  // text-align: center;
-  // justify-content: center;
 }
 
 .site-icon {
-  // display: flex;
-  // align-items: center;
   background-image: image_url('jedi_symbol.jpg');
-  background-size: 26px 26px;
-  height: 26px;
-  width: 26px;
-  // width:50%;
+  background-size: 30px 30px;
+  height: 30px;
+  width: 30px;
 }
 
 .redirect-border {
   background-color: #262626;
-  // border-left: thick solid red;
-  height: 28px;
+  height: 34px;
   width: 1px;
-  margin: 0 16px;
+  margin: 0 18px;
 }
 
 .site-name {
-  margin: 22px auto 12px;
-  font-size: 24px;
+  // margin: 22px auto 12px;
+  font-size: 25px;
   color: black;
   font-family: 'Faster One', cursive;
-  // text-transform: uppercase;
   text-decoration:  none;
 }
 
 .search-bar-container {
-  // display: inline;
   width: 215px;
   height: 28px;
   border: solid 1px #dbdbdb;
@@ -77,10 +63,8 @@
   text-align: center;
   z-index: 2;
   font-size: 14px;
-  // padding: 7px;
   color: #999;
   border-radius: 3px;
-  // margin-top: 10px;
 }
 
 .search-bar {
@@ -88,24 +72,22 @@
   margin-right: 2px;
   display: flex;
   justify-content: center;
-  // align-items: center;
-  // height: 100%;
-  padding: 2px;
 }
 
-.search-icon {
-  background-image: image_url('search-icon.png');
-  background-size: 15px 15px;
-  width: 15px;
-  height: 15px;
-  margin-right: 2px;
-}
+// .search-icon {
+//   background-image: image_url('search-icon.png');
+//   background-size: 15px 15px;
+//   width: 15px;
+//   height: 15px;
+//   margin-right: 2px;
+// }
 
 .search-text {
+  color: black;
+  font-weight: 500;
 }
 
 .menu-icons-container {
-  // background-color: blue;
   display: flex;
   justify-content: flex-end;
   width: 377px;
@@ -119,26 +101,25 @@
   align-items: center;
   width: 156px;
   height: 24px;
-  // background-color: pink;
 }
 
 .upload-icon {
   background-image: image_url('x-wing.png');
-  background-size: 28px 28px;
-  height: 28px;
-  width: 28px;
+  background-size: 32px 32px;
+  height: 32px;
+  width: 32px;
 }
 
 .activity-icon {
   background-image: image_url('rebel-symbol.jpg');
-  background-size: 22px 22px;
-  height: 22px;
-  width: 22px;
+  background-size: 30px 30px;
+  height: 30px;
+  width: 30px;
 }
 
 .user-icon {
   background-image: image_url('stormtrooper-icon.jpg');
-  background-size: 22px 22px;
-  height: 22px;
-  width: 22px;
+  background-size: 30px 30px;
+  height: 30px;
+  width: 30px;
 }

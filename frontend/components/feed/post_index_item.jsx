@@ -7,19 +7,13 @@ const Timestamp = require('react-timestamp');
 class PostIndexItem extends React.Component {
   constructor(props){
     super(props);
-    // let post = this.props.post;
-    // console.log(this.props.post)
     this.handleLike = this.handleLike.bind(this);
-    // this.handleKey = this.handleKey.bind(this);
     this.deleteLike = this.props.deleteLike;
     this.createLike = this.props.createLike;
     this.createComment = this.props.createComment;
   }
 
   handleLike(e){
-    // console.log(this.props)
-    // console.log(this.props.post.id)
-    // console.log(this.props.post.liked)
     if (this.props.post.liked) {
       this.deleteLike(this.props.post.id);
     } else {
@@ -28,8 +22,6 @@ class PostIndexItem extends React.Component {
   }
 
   render(){
-    // console.log(this.props.post.liked)
-
     return (
     <section className="feed-scroll">
       <article className="post-item-container">

@@ -1,12 +1,11 @@
-// import React from 'react';
-// import { connnect } from 'react-redux';
-// import NavBar from './nav_bar';
+import { connect } from 'react-redux';
+import NavBar from './nav_bar';
 
-// const mapStateToProps = (state) = ({
-//   currentUser: state.session.currentUser
-// });
+const mapStateToProps = (state) => {
+  return ({
+    currentUser: state.entities.users[state.session.id]
+  })
+};
 
-// const mapDispatchToProps = (dispatch) => ({
-// })
 
-// export default connect(null, null)(NavBar);
+export default connect(mapStateToProps, null)(NavBar);

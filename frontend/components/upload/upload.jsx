@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter} from 'react-router-dom';
-import NavBar from '../nav_bar/nav_bar';
+import NavBarContainer from '../nav_bar/nav_bar_container';
+import Footer from '../footer/footer';
 
 class Upload extends React.Component {
   constructor(props) {
@@ -41,8 +42,8 @@ class Upload extends React.Component {
 
   render() {
     return (
-      <div>
-        <NavBar />
+      <div className="upload">
+        <NavBarContainer />
         <div className="upload-form-container">
           <form className="upload-form" onSubmit={this.handleSubmit.bind(this)}>
             <div>
@@ -59,6 +60,7 @@ class Upload extends React.Component {
             <button>Dispatch a droid</button>
           </form>
         </div>
+        <Footer />
       </div>
     );
   }

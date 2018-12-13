@@ -1,7 +1,7 @@
 // import GreetingContainer from './greeting_container';
 import React from 'react';
 import { withRouter, Link } from 'react-router-dom';
-import NavBar from '../nav_bar/nav_bar';
+import NavBarContainer from '../nav_bar/nav_bar_container';
 // import Modal from '../modal/modal';
 import ReactDOM from 'react-dom';
 import Footer from '../footer/footer';
@@ -43,7 +43,7 @@ class Greeting extends React.Component {
   render() {
     return (
       <div className="user-page-container">
-        <NavBar />
+        <NavBarContainer />
         <div className="user-page">
           <div className="user-entire-feed">
             <header className="user-header-container">

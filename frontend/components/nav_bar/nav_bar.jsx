@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 
-export default() => {
+const NavBar = (props) => {
   return (
     <div>
     <nav className="nav-bar">
@@ -18,8 +18,7 @@ export default() => {
           </div>
           <div className="search-bar-container">
             <div className="search-bar">
-              <div className="search-icon"/>
-              <span className="search-text">Welcome Demo User!</span>
+              <span className="search-text">Welcome { props.currentUser.username }!</span>
             </div>
           </div>
           <div className="menu-icons-container">
@@ -37,5 +36,6 @@ export default() => {
   );
 };
 
+export default NavBar;
 
-// <div></div>
+// <div className="search-icon"/>

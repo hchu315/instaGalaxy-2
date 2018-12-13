@@ -6,29 +6,20 @@ class Comment extends React.Component {
     this.state = {
       commentBody: ''
     }
-    // debugger;
     this.createComment = this.props.createComment;
-    // console.log(this.props)
     this.postId = this.props.postId;
     this.handleKey = this.handleKey.bind(this);
   }
-
-  // componentDidMount(){
-  //   this.props.fetchComments();
-  // }
 
   handleKey(e){
     const commentBody = this.state.commentBody;
     // this.setState({ commentBody: e.target.value});
     if (e.keyCode === 13) {
       e.preventDefault();
-      // console.log(this.state.commentBody)
       const comment = {
         body: commentBody,
         post_id: this.props.postId
       }
-      // console.log(this.postId);
-      // console.log(comment);
       this.createComment(comment).then(() => this.setState({commentBody: ''})
       );
     }
