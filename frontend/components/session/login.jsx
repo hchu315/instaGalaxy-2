@@ -7,10 +7,40 @@ class Login extends React.Component {
     super(props);
     this.state = {
       username: '',
-      password: ''
+      password: '',
+      index: 1
     };
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleDemo = this.handleDemo.bind(this)
+  }
+
+
+  componentDidMount(){
+    setInterval(() => this.switchImage(), 2500);
+  }
+
+  // testFunction(){
+  //   console.log('worked!');
+  // }
+
+  // var index = 1;
+
+  switchImage(){
+    // if (this.state.index > 4) {
+    //   this.setState({index: this.state.index % 5});
+    //   $(`.transition-images, .transitioning-image-${this.state.index}`)
+    //       .toggleClass('fade-in');
+    //   } else {
+        // this.setState({index: this.state.index + 2});
+        $(`.transitioning-image-${this.state.index%5}`)
+          .toggleClass('fade-in');
+        $(`.transitioning-image-${(this.state.index-1)%5}`)
+          .toggleClass('fade-in').toggleClass('fade-out')
+        $(`.transitioning-image-${(this.state.index-2)%5}`)
+          .toggleClass('fade-out')
+
+        this.setState({ index: (this.state.index + 1)});
+      // }
   }
 
   handleInput(field){
@@ -30,16 +60,33 @@ class Login extends React.Component {
   }
 
   render(){
+    // let index = 1;
+    //
+    // function switchImage(){
+    //   if (index > 4) {
+    //     $(`.transition-images, .transitioning-image-${index}`)
+    //       .toggleClass('fade-in');
+    //     index = 1;
+    //   } else {
+    //     $(`.transition-images, .transitioning-image-${index}`)
+    //       .toggleClass('fade-in');
+    //     index++;
+    //   }
+    // }
+
+    // setInterval(console.log('this worked?'), 1000);
+    // setInterval(switchImage(), 2000);
+
     return (
       <section className="login-page">
         <div className="full-form-container">
           <div className="my_image">
             <div className="transitioning-images-container">
-              <div className="transitioning-image-1"/>
-              <div className="transitioning-image-2"/>
-              <div className="transitioning-image-3"/>
-              <div className="transitioning-image-4"/>
-              <div className="transitioning-image-5"/>
+              <div className="transition-images transitioning-image-0 fade-in"/>
+              <div className="transition-images transitioning-image-1"/>
+              <div className="transition-images transitioning-image-2"/>
+              <div className="transition-images transitioning-image-3"/>
+              <div className="transition-images transitioning-image-4"/>
 
             </div>
           </div>

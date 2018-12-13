@@ -160,60 +160,57 @@
   // position: relative;
 }
 
-.transitioning-image-1 {
-  // transition: opacity 1.5s ease-in;
+.transition-images {
   position: absolute;
   margin-left: 159px;
   margin-top: 104px;
-  background-image: image_url('transition-image-1.jpg');
   background-size: 100% 100%;
   width: 250px;
   height: 446px;
+  visibility: hidden;
+  // transition: opacity 1.5s ease-in;
+  opacity: 0;
+}
+
+.transitioning-image-0 {
+  // transition: ease-in;
+  background-image: image_url('transition-image-1.jpg');
+  // transition: background-image 3s ease-in;
   // visibility: hidden;
+  // visibility: visible;
+}
+
+.transitioning-image-1 {
+  background-image: image_url('transition-image-2.jpg');
+  // transition: background-image 3s ease-in;
 }
 
 .transitioning-image-2 {
-  position: absolute;
-  margin-left: 159px;
-  margin-top: 104px;
-  background-image: image_url('transition-image-2.jpg');
-  background-size: 100% 100%;
-  width: 250px;
-  height: 446px;
-  visibility: hidden;
+  background-image: image_url('transition-image-3.jpg');
+  // transition: background-image 3s ease-in;
 }
 
 .transitioning-image-3 {
-  position: absolute;
-  margin-left: 159px;
-  margin-top: 104px;
-  background-image: image_url('transition-image-3.jpg');
-  background-size: 100% 100%;
-  width: 250px;
-  height: 446px;
-  visibility: hidden;
+  background-image: image_url('transition-image-4.jpg');
+  // transition: background-image 3s ease-in;
 }
 
 .transitioning-image-4 {
-  position: absolute;
-  margin-left: 159px;
-  margin-top: 104px;
-  background-image: image_url('transition-image-4.jpg');
-  background-size: 100% 100%;
-  width: 250px;
-  height: 446px;
-  visibility: hidden;
+  background-image: image_url('transition-image-5.jpg');
+  // transition: background-image 3s ease-in;
 }
 
-.transitioning-image-5 {
-  position: absolute;
-  margin-left: 159px;
-  margin-top: 104px;
-  background-image: image_url('transition-image-5.jpg');
-  background-size: 100% 100%;
-  width: 250px;
-  height: 446px;
-  visibility: hidden;
+
+.fade-in {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 1.5s ease-in;
+  z-index: 2;
+}
+
+.fade-out {
+  opacity: 1;
+  visibility: visible;
 }
 
 .login-links-form {
