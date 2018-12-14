@@ -26,8 +26,6 @@ class Comment extends React.Component {
   }
 
   render() {
-    // const comments = this.props.comments.map(comment => )
-    // debugger
     return (
       <section className="comment-box-container">
         <div className="comment-box">

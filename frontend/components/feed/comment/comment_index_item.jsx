@@ -1,6 +1,7 @@
 import React from 'react';
 
 const CommentIndexItem = ({ postId, comment }) => {
+  // console.log(comment)
   return (
     <div className="post-comment">
       <span className="comment-author">
