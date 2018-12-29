@@ -1,6 +1,7 @@
 json.user do
   json.extract! user, :id, :username, :full_name, :email
-  json.photoUrl url_for(user.image)
+  # debugger
+  json.photoUrl url_for(user.image) if user.image.attached?
   json.posts user.posts.map { |post| post.id }
 end
 
