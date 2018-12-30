@@ -1,19 +1,13 @@
-// import GreetingContainer from './greeting_container';
 import React from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import NavBarContainer from '../nav_bar/nav_bar_container';
-// import Modal from '../modal/modal';
+import Modal from '../modal/modal';
 import ReactDOM from 'react-dom';
 import Footer from '../footer/footer';
-// import Modal from 'react-modal';
 
 class Greeting extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      modalIsOpen: false
-    };
-
     this.renderPosts = this.renderPosts.bind(this);
   }
 
@@ -27,22 +21,19 @@ class Greeting extends React.Component {
       return null;
     } else {
       return (
-        <div className="personal-album-inner-container">
+        <div className="personal-album-inner-container" >
           {currentUser.posts.map(postId =>
-            <img src={posts[postId-1].photoUrl}/>
+            <img src={posts[postId-1].photoUrl} onClick={ () => this.props.openPost(posts[postId-1].photoUrl) }/>
           )}
         </div>
       )
     }
   }
 
-  logoutHandler (){
-    this.props.logout();
-  }
-
   render() {
     return (
       <div className="user-page-container">
+        <Modal  />
         <NavBarContainer />
         <div className="user-page">
           <div className="user-entire-feed">
@@ -60,7 +51,7 @@ class Greeting extends React.Component {
                   </Link>
                   <div className="account-settings-icon-container">
                     <div className="account-settings-icon">
-                      <input className="account-settings-icon2" onClick={this.logoutHandler.bind(this)} title="Logout"
+                      <input className="account-settings-icon2" onClick={this.props.openModal.bind(this)} title="Logout"
                         src="https://cdn.dribbble.com/users/966/screenshots/2262572/bb-8.png" type="image"/>
                       <div>
                       </div>
@@ -88,7 +79,6 @@ class Greeting extends React.Component {
               {this.renderPosts()}
             </div>
           </div>
-
         </div>
         <Footer />
       </div>
@@ -96,10 +86,3 @@ class Greeting extends React.Component {
 }
 
 export default Greeting;
-// ReactDOM.render(<App />, 'root')
-
-// {this.props.currentUser}
-// <div className="user-icons-navi">
-// </div>
-// <div className="user-personal-feed">
-// </div>

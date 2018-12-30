@@ -22,7 +22,6 @@ class CommentIndex extends React.Component {
       }
     }
   )
-  // console.log(comments)
 
     return (
     <div>

@@ -1,12 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { logout } from  '../../actions/session_actions';
 import { fetchPosts } from '../../actions/post_actions';
 import Greeting from './greeting';
-
+import { openModal } from '../../actions/modal_actions';
 
 const mapStateToProps = (state) => {
-
   // console.log(state);
   return ({
     currentUser: state.entities.users[state.session.id],
@@ -15,8 +13,9 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchtoProps = (dispatch) => ({
-  logout: () => dispatch(logout()),
-  fetchPosts: () => dispatch(fetchPosts())
+  fetchPosts: () => dispatch(fetchPosts()),
+  openModal: () => dispatch(openModal('logout')),
+  openPost: (img) => dispatch(openModal(img))
 });
 
 export default connect(mapStateToProps, mapDispatchtoProps)(Greeting);
