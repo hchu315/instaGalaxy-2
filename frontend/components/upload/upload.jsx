@@ -42,8 +42,9 @@ class Upload extends React.Component {
 
   render() {
     return (
-      <div className="upload">
+      <div className="upload-page-container">
         <NavBarContainer />
+      <div className="upload">
         <div className="upload-form-container">
           <form className="upload-form" onSubmit={this.handleSubmit.bind(this)}>
             <div>
@@ -59,9 +60,10 @@ class Upload extends React.Component {
             <br/>
             <button>Dispatch a droid</button>
           </form>
+          <Footer />
         </div>
-        <Footer />
       </div>
+    </div>
     );
   }
 }
