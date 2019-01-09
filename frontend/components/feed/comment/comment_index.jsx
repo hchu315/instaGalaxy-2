@@ -5,6 +5,7 @@ class CommentIndex extends React.Component {
   constructor(props){
     super(props);
     this.fetchComments = this.props.fetchComments;
+    this.currentUser = this.props.currentUser;
   }
 
   componentDidMount(){
@@ -17,6 +18,7 @@ class CommentIndex extends React.Component {
         return <CommentIndexItem
             comment={comment}
             postId={this.props.postId}
+            currentUser={this.currentUser}
           />;
 
       }

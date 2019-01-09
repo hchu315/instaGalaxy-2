@@ -4,10 +4,10 @@ import { fetchComments } from "../../../actions/comment_actions";
 import CommentIndex from "./comment_index";
 
 const mapStateToProps = (state, ownProps) => {
-  console.log(state)
+  // console.log(state)
   return ({
     comments: Object.values(state.entities.comments),
-    // users: state.entities.users
+    currentUser: state.entities.users[state.session.id],
     postId: ownProps.postId
   })
 };
