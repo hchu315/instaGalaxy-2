@@ -32,9 +32,7 @@ class Login extends React.Component {
       $(`.transitioning-image-${(this.state.index-2)%5}`)
         .toggleClass('fade-out');
 
-      // if (this.isMounted === true){
         this.setState({ index: (this.state.index + 1)});
-      // }
   }
 
   handleInput(field){
@@ -122,8 +120,3 @@ class Login extends React.Component {
 }
 
 export default Login;
-
-// <button>
-//   <span className="fb-icon">
-//   </span>
-// </button>

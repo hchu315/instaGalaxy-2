@@ -5,10 +5,9 @@ import Greeting from './greeting';
 import { openModal } from '../../actions/modal_actions';
 
 const mapStateToProps = (state) => {
-  // console.log(state);
   return ({
     currentUser: state.entities.users[state.session.id],
-    posts: state.entities.posts
+    posts: Object.values(state.entities.posts).reverse(),
   });
 };
 

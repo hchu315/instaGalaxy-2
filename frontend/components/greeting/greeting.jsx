@@ -15,6 +15,8 @@ class Greeting extends React.Component {
     this.props.fetchPosts();
   }
 
+  // {console.log(currentUser.posts)}
+  // {console.log(currentUser)}
   renderPosts(){
     let { currentUser, posts } = this.props
     if (Object.keys(posts).length === 0) {
@@ -22,13 +24,18 @@ class Greeting extends React.Component {
     } else {
       return (
         <div className="personal-album-inner-container" >
-          {currentUser.posts.map(postId =>
-            <img src={posts[postId-1].photoUrl} onClick={ () => this.props.openPost(posts[postId-1].photoUrl) }/>
+          {posts.map(post => post.user_id === currentUser.id ?
+          <img src={post.photoUrl} onClick={ () => this.props.openPost(post.photoUrl) }/> : ''
           )}
         </div>
       )
     }
   }
+  // (<img src={post.photoUrl} onClick={ () => this.props.openPost(post.photoUrl) }/>)
+  //
+  // {currentUser.posts.map(postId =>
+  //   <img src={posts[postId].photoUrl} onClick={ () => this.props.openPost(posts[postId].photoUrl) }/>
+  // )}
 
   render() {
     return (
