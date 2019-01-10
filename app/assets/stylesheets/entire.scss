@@ -125,11 +125,13 @@
   background-image: image_url('homepage_IG.png');
   background-size: 475px;
   width:50%;
+  // min-height: 100%;
 }
 
 .transitioning-images-container {
   width: 100%;
   min-height: 100%;
+  overflow: visible;
 }
 
 .transition-images {
