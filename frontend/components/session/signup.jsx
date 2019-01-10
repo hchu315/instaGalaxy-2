@@ -25,7 +25,6 @@ class Signup extends React.Component {
     e.preventDefault();
     this.props.signup(this.state).then(this.props.history.push('/feed'));
   }
-  // is the history.push necessary?
 
   handleDemo(e){
     e.preventDefault();
@@ -99,7 +98,8 @@ class Signup extends React.Component {
           </span>
         </div>
         <div className="session-links-container">
-          <span>Get the app.</span>
+          <a href="https://www.linkedin.com/in/henry-chu-65578a13a/" className="session-linkedin" />
+          <a href="https://github.com/hchu315" className="session-github" />
         </div>
       </div>
       </div>

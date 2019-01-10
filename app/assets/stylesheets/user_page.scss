@@ -9,7 +9,6 @@
   flex-direction: column;
   align-items: center;
   overflow: auto;
-  // height: 100vh;
 }
 
 
@@ -32,7 +31,6 @@
 
 .user-header-container {
   display: flex;
-  // flex-direction: direction;
   width: 935px;
   height: 152px;
   margin: 60px 20px 0;
@@ -65,26 +63,15 @@
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
-  // left: 0;
-  // top: 0;
-  // position: relative;
-  // justify-content: flex-start;
 }
 
 .user-settings-bar {
-  // position: relative;
   display: flex;
-  // align-items: flex-start;
-  // justify-content: flex-start;
 }
 
 .user-page-username {
-  // position: absolute;
   font-size: 28px;
   font-weight: 100;
-  // font-family: sans-serif;
-  // top: 0px;
-  // left: 0px;
 }
 
 .edit-profile-button-container {
@@ -92,7 +79,6 @@
 }
 
 .edit-profile-button {
-  // background-color: #3897f0;
   background-color: transparent;
   border: 1px solid #dbdbdb;
   color: #262626;
@@ -109,7 +95,6 @@
   display: flex;
   justify-content: center;
   margin-left: 4px;
-  // align-items: center;
 }
 
 //comment back in for bb8 icon
@@ -120,7 +105,6 @@
   height: 32px;
   border: 0;
   border-radius: 10px;
-  // border: hidden;
 }
 
 .account-settings-icon2 {
@@ -143,8 +127,6 @@
   display: flex;
   flex-direction: row;
   list-style-type: none;
-  // align-items: space-around;
-  // justify-content: space-around;
   padding-left: 0;
   left: 0;
   margin-bottom: 20px;
@@ -166,7 +148,6 @@
 .intermediate-bar {
   width: 935px;
   height: 53px;
-  // border-top: 1px solid #efefef
 }
 
 .personal-album-container {
@@ -176,23 +157,6 @@
 }
 
 .personal-album-inner-container {
-  // display: grid;
-  // grid-template-columns: auto auto auto;
-  // display: flex;
-  // align-items:
-  // flex-wrap: wrap-reverse;
-  // flex-direction: row;
-  // justify-content: flex-end;
-  // flex-flow: row-reverse;
-  // grid-template-columns: auto;
-  // flex-direction: row-reverse;
-  // justify-content: flex-start;
-  // flex-wrap: wrap-reverse;
-  // flex-flow: row-reverse;
-
-  // flex-flow: row;
-  // justify-content: space-around;
-  // direction:rtl;
   img {
     width: 293px;
     height: 293px;

@@ -2,7 +2,6 @@ import React from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import NavBarContainer from '../nav_bar/nav_bar_container';
 import Modal from '../modal/modal';
-import ReactDOM from 'react-dom';
 import Footer from '../footer/footer';
 
 class Greeting extends React.Component {
@@ -15,8 +14,6 @@ class Greeting extends React.Component {
     this.props.fetchPosts();
   }
 
-  // {console.log(currentUser.posts)}
-  // {console.log(currentUser)}
   renderPosts(){
     let { currentUser, posts } = this.props
     if (Object.keys(posts).length === 0) {

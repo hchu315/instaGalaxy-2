@@ -29,7 +29,6 @@
   height: 100%;
   border: 1px solid #e6e6e6;
   padding: 10px;
-  // padding-left: 10px;
   margin-top: 10px;
   background-color: white;
 }
@@ -100,11 +99,6 @@
 
 .signin-input-boxes {
   margin: 0 0 16px;
-  // border: 0;
-  // height: 36px;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
 }
 
 .signup-email-container {
@@ -115,13 +109,11 @@
 .signup-box {
   display: flex;
   height: 36px;
-  // margin-bottom: 10px;
 }
 
 .signup-input-text {
   width:100%;
   height:36px;
-  // border: 2;
   border-radius: 3px;
   font-size: 16px;
   margin: 0 30px;
@@ -150,9 +142,18 @@
   justify-content: center;
   margin-top: 30px;
 }
-// font-weight: 600;
-// font-size: 22px;
-// line-height: 20px;
-// margin: 0 40px 10px;
-// text-align: center;
-// color: #999;
+
+.session-linkedin {
+  background-image: image_url('Github-Octocat.png');
+  background-size: 40px 40px;
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+}
+
+.session-github {
+  background-image: image_url('iconfinder_social_style_3_in_341103.png');
+  background-size: 40px 40px;
+  width: 40px;
+  height: 40px;
+}
