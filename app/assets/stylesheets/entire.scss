@@ -125,13 +125,11 @@
   background-image: image_url('homepage_IG.png');
   background-size: 475px;
   width:50%;
-  // min-height: 100%;
 }
 
 .transitioning-images-container {
   width: 100%;
   min-height: 100%;
-  overflow: visible;
 }
 
 .transition-images {
@@ -308,7 +306,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  margin-top: 80px;
+  // margin-top: 80px;
 }
 
 .footer-inner-container {
