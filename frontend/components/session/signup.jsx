@@ -35,6 +35,10 @@ class Signup extends React.Component {
     return (
       <div className="full-session-container">
       <div className="session-form-container">
+        <div className="session-links-container">
+          <a href="https://www.linkedin.com/in/henry-chu-65578a13a/" className="session-linkedin" />
+          <a href="https://github.com/hchu315" className="session-github" />
+        </div>
         <div className="session-form">
           <div className="session-signup-container">
             <h1 className="signup-form-header">
@@ -97,9 +101,8 @@ class Signup extends React.Component {
             <Link className="signup-login-link" to={'/'}> Log in</Link>
           </span>
         </div>
-        <div className="session-links-container">
-          <a href="https://www.linkedin.com/in/henry-chu-65578a13a/" className="session-linkedin" />
-          <a href="https://github.com/hchu315" className="session-github" />
+        <div className="session-getapp-container">
+          <span>Get the app.</span>
         </div>
       </div>
       </div>

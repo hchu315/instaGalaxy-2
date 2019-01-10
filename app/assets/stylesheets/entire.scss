@@ -121,6 +121,10 @@
   height:30px;
 }
 
+.login-button:hover {
+  box-shadow: 0px 0px 10px #3897f0;
+}
+
 .my_image {
   background-image: image_url('homepage_IG.png');
   background-size: 475px;
@@ -274,10 +278,12 @@
   font-weight: 600;
 }
 
+.demo-button:hover {
+  box-shadow: 0px 0px 10px #3897f0;
+}
 
 .appstore-links {
   margin: 10px 0;
-  // text-align: center;
   display: flex;
 }
 
@@ -290,6 +296,10 @@
   margin-right: 5px;
 }
 
+.appstore-button-linkedin:hover {
+  box-shadow: 0px 0px 10px;
+}
+
 .appstore-button-github {
   display: block;
   background-image: image_url('Github-Octocat.png');
@@ -299,6 +309,10 @@
   margin-left: 5px;
 }
 
+.appstore-button-github:hover {
+  box-shadow: 0px 0px 10px;
+}
+
 .footer-container {
   width:1381px;
   height:104px;
@@ -306,7 +320,6 @@
   left: 0;
   right: 0;
   bottom: 0;
-  // margin-top: 80px;
 }
 
 .footer-inner-container {

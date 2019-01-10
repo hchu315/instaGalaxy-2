@@ -156,11 +156,28 @@
   margin-right: 0;
 }
 
-.personal-album-inner-container {
-  img {
-    width: 293px;
-    height: 293px;
-    margin-bottom: 18px;
-    margin-right: 18px;
-  }
+// .personal-album-inner-container {
+//   img {
+    // width: 293px;
+    // height: 293px;
+    // margin-bottom: 18px;
+    // margin-right: 18px;
+//   }
+// }
+
+.album-picture {
+  width: 293px;
+  height: 293px;
+  margin-bottom: 18px;
+  margin-right: 18px;
+}
+
+.album-picture:hover {
+  // position: absolute
+  box-shadow: 0px 0px 10px;
+  // background: rgba(0, 0, 0, 0.5);
+  // top: 0;
+  // left: 0;
+  // right: 0;
+  // bottom: 0;
 }
