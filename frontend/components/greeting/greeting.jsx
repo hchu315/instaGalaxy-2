@@ -37,7 +37,7 @@ class Greeting extends React.Component {
   render() {
     return (
       <div className="user-page-container">
-        <Modal  />
+        <Modal currentUser={this.props.currentUser} />
         <NavBarContainer />
         <div className="user-page">
           <div className="user-entire-feed">

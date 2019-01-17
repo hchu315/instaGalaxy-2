@@ -5,7 +5,7 @@ import Feed from './feed';
 
 
 const mapStateToProps = (state) =>  {
-  // console.log(state)
+  // console.log(state.entities.posts)
   return ({
     posts: Object.values(state.entities.posts),
     currentUser: state.entities.users[state.session.id]

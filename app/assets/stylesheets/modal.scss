@@ -34,9 +34,10 @@
 .post-show-container {
   // outline: 1px solid black;
   // padding: 4px 8px;
+  display: flex;
   background: white;
   position: relative;
-  width: 600px;
+  width: 916px;
   height: 600px;
   // border-radius: 12px;
 }
@@ -44,4 +45,23 @@
 .post-show {
   width: 600px;
   height: 600px;
+}
+
+.post-show-sidebar {
+  padding: 20px;
+  width: 100%;
+
+}
+
+.post-show-header {
+  height: 72px;
+  font-weight: 600;
+  // text-align: 
+  border-bottom: 1px solid #efefef;
+  line-height: 3;
+  // display: inline-block;
+}
+
+.post-show-comments {
+  padding: 12px 0;
 }

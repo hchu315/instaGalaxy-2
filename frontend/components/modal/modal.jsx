@@ -5,16 +5,20 @@ import { connect } from 'react-redux';
 import LogoutModal from './logout_modal';
 import PostShowModal from './post_show_modal';
 
-const mapStateToProps = (state) => ({
-  modal: state.ui.modal
-});
+const mapStateToProps = (state, ownProps) => {
+  // console.log(ownProps)
+  return ({
+  modal: state.ui.modal,
+  currentUser: ownProps.currentUser.username
+  })
+};
 
 const mapDispatchToProps = (dispatch) => ({
   closeModal: () => dispatch(closeModal()),
   logout: () => dispatch(logout())
 });
 
-function Modal({ modal, closeModal, logout }) {
+function Modal({ modal, closeModal, logout, currentUser }) {
   if (!modal) {
     return null
   }
@@ -25,7 +29,7 @@ function Modal({ modal, closeModal, logout }) {
       component = <LogoutModal logout={ logout } closeModal={ closeModal }  />;
       break;
     case modal:
-      component = <PostShowModal modalUrl={ modal } />
+      component = <PostShowModal modalUrl={ modal } currentUser={ currentUser } />
       break;
     default:
       return null;
