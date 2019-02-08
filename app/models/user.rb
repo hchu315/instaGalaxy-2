@@ -21,7 +21,6 @@ class User < ApplicationRecord
 
   after_initialize :ensure_session_token
 
-  # add associations later
   has_many :posts
   has_many :likes
   has_one_attached :image

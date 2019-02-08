@@ -14,7 +14,6 @@ class ApplicationController < ActionController::Base
 
   def require_login
     redirect_to session_url unless logged_in?
-    # correct REDIRECT?
   end
 
   def logged_in?
