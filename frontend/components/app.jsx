@@ -25,6 +25,7 @@ const App = () => (
         <ProtectedRoute exact path="/feed" component={FeedContainer} />
         <ProtectedRoute exact path="/greeting" component={GreetingContainer} />
         <ProtectedRoute exact path="/upload" component={Upload} />
+        <ProtectedRoute exact path="/accounts/edit" component={AccountsEditContainer} />
         <Route component={Errors} />
       </Switch>
 
