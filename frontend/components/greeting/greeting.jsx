@@ -50,7 +50,7 @@ class Greeting extends React.Component {
               <section className="user-info-container">
                 <div className="user-settings-bar">
                   <div className="user-page-username">{this.props.currentUser.username}</div>
-                  <Link className="edit-profile-button-container" to="">
+                  <Link className="edit-profile-button-container" to={"/accounts/edit"}>
                     <button className="edit-profile-button">Edit Profile</button>
                   </Link>
                   <div className="account-settings-icon-container">

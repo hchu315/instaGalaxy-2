@@ -1,12 +1,17 @@
 import { connect } from 'react-redux';
-import AccountsEdit from './accounts_edit';
+import React from 'react';
+import { AccountsEdit } from './accounts_edit';
 
-const mapStateToProps = () => {
-
+const mapStateToProps = (state) => {
+  console.log(state)
+  return {
+    currentUser: state.entities.users[state.session.id],
+    
+  }
 }
 
-const mapDispatchToProps = () => {
+// const mapDispatchToProps = () => {
 
-}
+// }
 
-export default connect(mapDispatchToProps, mapStateToProps)(AccountsEdit);
+export default connect(mapStateToProps, null)(AccountsEdit);

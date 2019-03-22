@@ -13,6 +13,7 @@ import LoginContainer from './session/login_form_container';
 import FeedContainer from './feed/feed_container';
 import GreetingContainer from './greeting/greeting_container';
 import Upload from './upload/upload';
+import AccountsEditContainer from './accounts/accounts_edit_container';
 import Errors from './errors/error';
 import { AuthRoute, ProtectedRoute } from '../utils/route_utils';
 

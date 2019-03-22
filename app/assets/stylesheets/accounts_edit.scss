@@ -1,0 +1,82 @@
+.accounts-edit-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // justify-content: center;
+}
+
+.accounts-edit {
+  display: flex;
+  width: 935px;
+  height: 646px;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  background-color: #fff;
+  margin-top: 14px; 
+}
+
+.accounts-edit-options {
+  border-right: 1px solid #dbdbdb;
+  flex: 1;
+}
+
+.accounts-edit-form-container {
+  flex: 3;
+  // display: flex;
+  // justify-content: center;
+}
+
+.edit-profile-selector {
+  list-style-type: none;
+  line-height: 3;
+}
+
+.edit-profile-user {
+  display: flex;
+  margin-top: 32px;
+}
+
+.edit-profile-picture {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin: 0 0 0 84px;
+}
+
+.edit-profile-items {
+  display: flex;
+  margin-left: 84px;
+  margin-bottom: 16px;
+  text-align: right;
+
+}
+
+.edit-profile-item-container {
+  padding-right: 32px;
+  width: 84px;
+  // text-align: center;
+  // font-weight: 500;
+  // margin-right:100px;
+}
+
+.edit-profile-item-labels {
+  font-weight: 600;
+  text-align: right;
+}
+
+.edit-submit-button-container {
+  // text-align: center;
+  margin-left: 200px;
+}
+
+.edit-submit-button {
+  color: #fff;
+  background-color: #3897f0;
+  border: 1px radius #3897f0;
+  border-radius: 4px;
+  padding: 5px 9px;
+}
+
+figure {
+  margin-right: 26px;
+}
