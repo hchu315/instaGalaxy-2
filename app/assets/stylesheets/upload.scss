@@ -1,13 +1,13 @@
 .upload-page-container {
-  position: fixed;
-  top: 0;
+  position: absolute;
+  // top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background-color: #efefef;
 }
 
-.upload {
+.upload {   
   // margin: 50px;
   // position:static;
 }

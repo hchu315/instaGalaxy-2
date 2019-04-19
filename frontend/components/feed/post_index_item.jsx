@@ -29,9 +29,11 @@ class PostIndexItem extends React.Component {
           <Link to={'/greeting'}>
             <div className="author-profile-picture" />
           </Link>
+          <Link to={'/greeting'}>
           <div className="author-username">
             {this.props.post.author}
           </div>
+          </Link>
         </header>
         <div className="post-img-container">
           <img className="post-img" src={this.props.post.photoUrl}/>

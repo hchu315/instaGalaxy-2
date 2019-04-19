@@ -3,15 +3,22 @@ import NavBarContainer from '../nav_bar/nav_bar_container';
 import Footer from "../footer/footer";
 
 
-export const AccountsEdit = (props) => {
-  console.log(props.currentUser.photoUrl)
-  return (
-    <div>
+class AccountsEdit extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+
+    }
+  }
+  
+  render() {
+    return (
+      <div className="accounts-edit-page">
       <NavBarContainer></NavBarContainer>
       <main className="accounts-edit-container">
         <section className="accounts-edit">
         <nav className="accounts-edit-options">
-          <ul>
+          <ul className="edit-profile-selector-container">
               <li className="edit-profile-selector">
               Edit Profile
             </li>
@@ -20,10 +27,10 @@ export const AccountsEdit = (props) => {
         <article className="accounts-edit-form-container">
           <div className="edit-profile-user">
             <figure>
-              <img src={ props.currentUser.photoUrl } className="edit-profile-picture" />
+              <img src={ this.props.currentUser.photoUrl } className="edit-profile-picture" />
             </figure>
             <h4>
-              { props.currentUser.username }
+              { this.props.currentUser.username }
             </h4>
           
           </div>
@@ -35,7 +42,7 @@ export const AccountsEdit = (props) => {
                 </label>
               </aside>
               <div>
-                <input value={ props.currentUser.full_name } onChange=""></input>
+                <input value={ this.props.currentUser.full_name } onChange=""></input>
               </div>
             </div>
             <div className="edit-profile-items">
@@ -45,7 +52,7 @@ export const AccountsEdit = (props) => {
                 </span>
               </aside>
                 <div>
-                <input value={ props.currentUser.username }></input>
+                <input value={ this.props.currentUser.username }></input>
               </div>
             </div>
             <div className="edit-submit-button-container">
@@ -54,8 +61,11 @@ export const AccountsEdit = (props) => {
           </form>
         </article>
         </section>
-      </main>
       <Footer></Footer>
+      </main>
     </div>
-  )
+    )
+  }
 }
+
+export default AccountsEdit;

@@ -1,8 +1,12 @@
+.accounts-edit-page {
+  margin-top: 40px;
+  background-color: #efefef;
+}
+
 .accounts-edit-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  // justify-content: center;
 }
 
 .accounts-edit {
@@ -22,13 +26,22 @@
 
 .accounts-edit-form-container {
   flex: 3;
-  // display: flex;
-  // justify-content: center;
+}
+
+.edit-profile-selector-container {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  justify-content: center;
 }
 
 .edit-profile-selector {
   list-style-type: none;
   line-height: 3;
+}
+
+.edit-profile-selector:hover {
+  background-color: #efefef;
 }
 
 .edit-profile-user {
