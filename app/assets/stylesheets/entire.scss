@@ -221,19 +221,12 @@
   font-size: 13px;
 }
 
-.facebook-link-container {
-
-}
 
 .fb-icon {
   background-image: image_url('FB-icon.png');
   background-size: 16px 16px;
   width: 16px;
   height: 16px;
-}
-
-.fb-icon-text {
-
 }
 
 .forgot-password {
@@ -270,12 +263,17 @@
 }
 
 .demo-button {
+  margin-bottom: 10px;
   background-color: #3897f0;
   border: 1px solid #3897f0;
+  border-radius: 4px;
   color: #fff;
   position: relative;
-  margin-bottom: 5px;
+  padding: 5px, 9px;
   font-weight: 600;
+  width:258px;
+  height:30px;
+  
 }
 
 .demo-button:hover {
