@@ -39,4 +39,4 @@ def self.find_by_credentials(username, password)
 4) User Likes - Allows an user to like their favorite photo at the click of a button.
 5) User Comments - Allows an user to leave comments on photos. (In progress)
 
-![feed-page](https://github.com/hchu315/instaGalaxy/blob/master/app/assets/images/Screen%20Shot%202018-11-18%20at%2010.54.03%20PM.png)
+![feed-page](https://github.com/hchu315/instaGalaxy/blob/master/app/assets/images/github_user_splashpage.png)
