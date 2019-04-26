@@ -1,31 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[InstaGalaxy Live](https://instagalaxy.herokuapp.com/#/)
 
-Things you may want to cover:
+# InstaGalaxy
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-# instaGalaxy
-
-Welcome to instaGalaxy, an instagram-inspired clone web application. InstaGalaxy is a social-media platform that allows you to share your favorite photos with your friends and family, and interact through commenting and liking photos. Post your favorite photo or look at photos posted by other users!
+Welcome to InstaGalaxy, an instagram-inspired clone web application. InstaGalaxy is a social-media platform that allows you to share your favorite photos with your friends and family, and interact through commenting and liking photos. Post your favorite photo or look at photos posted by other users!
 
 This project was built over a period of 10 days, and there will be more changes and features added in the future.
 
