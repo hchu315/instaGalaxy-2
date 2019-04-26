@@ -8,8 +8,7 @@ Welcome to InstaGalaxy, an instagram-inspired clone web application. InstaGalaxy
 
 This project was built over a period of 10 days, and there will be more changes and features added in the future.
 
-![homepage](https://github.com/hchu315/instaGalaxy/blob/master/app/assets/images/instagalaxy%20homepage.png)
-
+![homepage](https://github.com/hchu315/instaGalaxy/blob/master/app/assets/images/github_readme_img.png)
 
 ## Technologies
 
