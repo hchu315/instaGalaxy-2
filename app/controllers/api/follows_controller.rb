@@ -4,7 +4,7 @@ class Api::FollowsController < ApplicationController
     @follow.user_id = current_user.id
 
     if @follow.save
-      
+      render "api/follows"
     end
   end
 
