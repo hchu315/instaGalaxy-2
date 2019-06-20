@@ -349,10 +349,12 @@
   display: flex;
   flex-direction: row;
   list-style-type: none;
-  justify-content: space-around;
+  justify-content: center;
+  margin-left: 160px;
 }
 
 .footer-nav-items {
+  margin-right: 40px;
 }
 
 .footer-nav-links {

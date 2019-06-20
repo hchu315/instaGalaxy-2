@@ -47,18 +47,18 @@ class Upload extends React.Component {
       <div className="upload">
         <div className="upload-form-container">
           <form className="upload-form" onSubmit={this.handleSubmit.bind(this)}>
-            <div>
-              <label>
-                Upload a new image:
-              </label>
+            <div className="upload-elements">
+              <span>
+                Share a new image:
+              </span>
               <input className="upload-locally" type="file" onChange={this.handleFile.bind(this)} />
-            </div>
             <br/>
-            <label className="caption-input">Post Caption<br/>
-              <textarea className="caption-input-text" type="text" onChange={this.handleInput.bind(this)} value={this.state.postCaption} />
+            <label className="caption-input">Add a caption:<br/>
+              <input className="caption-input-text" type="text" onChange={this.handleInput.bind(this)} value={this.state.postCaption} />
             </label>
             <br/>
-            <button>Dispatch a droid</button>
+            <button className="upload-button">Dispatch a droid (Submit)</button>
+            </div>
           </form>
           <Footer />
         </div>
