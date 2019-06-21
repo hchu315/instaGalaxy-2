@@ -6,9 +6,6 @@ import Footer from "../footer/footer";
 class AccountsEdit extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-
-    }
   }
 
   render() {
@@ -22,6 +19,9 @@ class AccountsEdit extends React.Component {
           <ul className="edit-profile-selector-container">
             <li className="edit-profile-selector">
               Edit Profile
+            </li>
+                <li className="edit-profile-selector" onClick={() => { }}> 
+              Change Password
             </li>
                 <li className="edit-profile-selector" onClick={() => { this.props.logout() }}> 
               Log Out
@@ -57,6 +57,16 @@ class AccountsEdit extends React.Component {
               </aside>
                 <div>
                 <input value={ this.props.currentUser.username }></input>
+              </div>
+            </div>
+            <div className="edit-profile-items">
+              <aside className="edit-profile-item-container">
+                <span className="edit-profile-item-labels">
+                  Bio
+                </span>
+              </aside>
+                <div>
+                <input value={ this.props.currentUser.bio }></input>
               </div>
             </div>
             <div className="edit-submit-button-container">

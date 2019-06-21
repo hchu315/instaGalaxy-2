@@ -70,7 +70,7 @@ class Greeting extends React.Component {
                 </ul>
                 <div className="fullname-bio-container">
                   <span>{this.props.currentUser.full_name}</span>
-                  <span>{this.props.currentUser.bio}</span>
+                  {/* <span>{this.props.currentUser.bio}</span> */}
                 </div>
               </section>
             </header>
