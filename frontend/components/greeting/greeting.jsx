@@ -35,7 +35,7 @@ class Greeting extends React.Component {
   // )}
 
   render() {
-    console.log(this.props.currentUser.username)
+    // console.log(this.props.currentUser.username)
     return (
       <div className="user-page-container">
         <Modal currentUser={this.props.currentUser} />

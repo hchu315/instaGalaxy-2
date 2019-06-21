@@ -1,13 +1,8 @@
 class Api::UsersController < ApplicationController
 
   def show
-    @user = User.find(params[:id])
-    if @user
-      render "api/users/show"
-      # FIX THIS
-    else
-      flash.now[:errors] = user.errors.full_messages
-    end
+    @user = User.find(params[:id])  
+    render "api/users/show"
   end
 
   def create
@@ -27,3 +22,9 @@ class Api::UsersController < ApplicationController
   end
 
 end
+
+  # debugger
+    # if @users
+  # FIX THIS
+    # else
+    #   flash.now[:errors] = user.errors.full_messages

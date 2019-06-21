@@ -22,14 +22,15 @@ class PostIndexItem extends React.Component {
   }
 
   render(){
+    // console.log(this.props)
     return (
     <section className="feed-scroll">
       <article className="post-item-container">
         <header className="post-header-container">
-          <Link to={'/greeting'}>
+          <Link to={`/users/${this.props.userId}`}>
             <div className="author-profile-picture" />
           </Link>
-          <Link to={'/greeting'}>
+            <Link to={`/users/${this.props.userId}`}>
           <div className="author-username">
             {this.props.post.author}
           </div>

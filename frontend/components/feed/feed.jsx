@@ -19,10 +19,11 @@ class Feed extends React.Component {
   }
 
   render() {
-    console.log(this.props.posts)
+    // console.log(this.props.posts)
     const posts = this.props.posts.map(post =>
       <PostIndexItem key={post.id} post={post}  createLike={this.createLike} deleteLike={this.deleteLike}
       currentUser={post.author}
+      userId={post.user_id}
       createComment={this.createComment}
       />
     );

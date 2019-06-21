@@ -31,7 +31,7 @@ const NavBar = (props) => {
                 <div className="activity-icon" title="Feed"/>
                 Feed
               </Link>
-                <Link to={"/greeting"} className="navbar-icons">
+                <Link to={`/users/${props.currentUser.id}`} className="navbar-icons">
                 <div className="user-icon" title="Profile"/>
                 Profile
               </Link>
