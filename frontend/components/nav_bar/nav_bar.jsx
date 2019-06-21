@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 const NavBar = (props) => {
   return (
@@ -23,9 +23,18 @@ const NavBar = (props) => {
           </div>
           <div className="menu-icons-container">
             <div className="menu-icons">
-              <Link to={"/upload"}><div className="upload-icon" title="Upload"/></Link>
-              <Link to={""}><div className="activity-icon" title="Feed"/></Link>
-              <Link to={"/greeting"}><div className="user-icon" title="User Profile"/></Link>
+              <Link to={"/upload"} className="navbar-icons">
+                <div className="upload-icon" title="Upload"/>
+                Upload
+              </Link>
+                <Link to={""} className="navbar-icons">
+                <div className="activity-icon" title="Feed"/>
+                Feed
+              </Link>
+                <Link to={"/greeting"} className="navbar-icons">
+                <div className="user-icon" title="Profile"/>
+                Profile
+              </Link>
             </div>
           </div>
         </div>
@@ -37,5 +46,3 @@ const NavBar = (props) => {
 };
 
 export default NavBar;
-
-// <div className="search-icon"/>

@@ -1,6 +1,5 @@
 .upload-page-container {
   position: absolute;
-  // top: 0;
   left: 0;
   right: 0;
   bottom: 0;
@@ -8,8 +7,6 @@
 }
 
 .upload {   
-  // margin: 50px;
-  // position:static;
 }
 
 .upload-form-container {
@@ -31,16 +28,13 @@
   border: 1px solid rgba(0, 0, 0, .0975);
   border-radius: 6px;
   background-color: lightgrey;
-  // box-shadow: 0px 0px 10px;
 }
 
 .upload-elements {
-  font-size: 18px;
+  font-size: 19px;
   font-family: 'Faster One';
   display: flex;
   flex-direction: column;
-  // justify-content: center;
-  // align-items: center;
 }
 
 .upload-locally {
@@ -48,15 +42,10 @@
 }
 
 .caption-input {
-  // width: 300px;
-  // font-size: 18px;
-  // font-family: 'Faster One', cursive;
 }
 
 .caption-input-text {
   width: 200px;
-  // opacity: 0.2;
-  // background-color: rgba(0,0,0,.0975)
 }
 
 .upload-button {
@@ -70,7 +59,4 @@
   width:208px;
   height:30px;
 }
-// .side-nav-footer {
-//   display: flex;
-//   flex-wrap: wrap;
-// }
+
