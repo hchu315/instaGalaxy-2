@@ -6,10 +6,9 @@ import LogoutModal from './logout_modal';
 import PostShowModal from './post_show_modal';
 
 const mapStateToProps = (state, ownProps) => {
-  // console.log(ownProps)
   return ({
-  modal: state.ui.modal,
-  currentUser: ownProps.currentUser.username
+    modal: state.ui.modal,
+    currentUser: ownProps.currentUser.username
   })
 };
 

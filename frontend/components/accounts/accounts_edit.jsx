@@ -10,8 +10,9 @@ class AccountsEdit extends React.Component {
 
     }
   }
-  
+
   render() {
+    // console.log(this.props)
     return (
       <div className="accounts-edit-page">
       <NavBarContainer></NavBarContainer>
@@ -19,8 +20,11 @@ class AccountsEdit extends React.Component {
         <section className="accounts-edit">
         <nav className="accounts-edit-options">
           <ul className="edit-profile-selector-container">
-              <li className="edit-profile-selector">
+            <li className="edit-profile-selector">
               Edit Profile
+            </li>
+                <li className="edit-profile-selector" onClick={() => { this.props.logout() }}> 
+              Log Out
             </li>
           </ul>
         </nav>

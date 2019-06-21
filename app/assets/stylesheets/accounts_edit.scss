@@ -1,5 +1,7 @@
 .accounts-edit-page {
-  margin-top: 40px;
+  margin-top: 80px;
+  margin-bottom: 40px;
+  // height: 100%;
   background-color: #efefef;
 }
 
@@ -11,16 +13,20 @@
 
 .accounts-edit {
   display: flex;
-  width: 935px;
-  height: 646px;
+  // width: 935px;
+  width: 635px;
+  // height: 646px;
+  height: 446px;
   border: 1px solid #dbdbdb;
   border-radius: 3px;
-  background-color: #fff;
+  // background-color: #fff;
+  background-color: lightgrey;
   margin-top: 14px; 
 }
 
 .accounts-edit-options {
-  border-right: 1px solid #dbdbdb;
+  // border-right: 1px solid #dbdbdb;
+  border-right: 3px solid #dbdbdb;
   flex: 1;
 }
 
@@ -42,6 +48,7 @@
 
 .edit-profile-selector:hover {
   background-color: #efefef;
+  font-weight: 600;
 }
 
 .edit-profile-user {
