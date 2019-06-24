@@ -19,7 +19,7 @@ class EditPassword extends React.Component {
                 </label>
                   </aside>
                   <div>
-                    <input value="" onChange=""></input>
+                    <input type="password"></input>
                   </div>
                 </div>
                 <div className="edit-profile-items">
@@ -29,7 +29,7 @@ class EditPassword extends React.Component {
                 </span>
                   </aside>
                   <div>
-                    <input value=""></input>
+                    <input type="text"></input>
                   </div>
                 </div>
                 <div className="edit-profile-items">
@@ -39,7 +39,7 @@ class EditPassword extends React.Component {
                 </span>
                   </aside>
                   <div>
-                    <input value=""></input>
+                    <input type="text"></input>
                   </div>
                 </div>
                 <div className="edit-submit-button-container">

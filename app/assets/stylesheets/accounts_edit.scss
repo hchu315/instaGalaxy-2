@@ -54,9 +54,11 @@
   line-height: 3;
 }
 
-.edit-profile-selector:hover {
+.edit-profile-selector-selected {
   background-color: #efefef;
   font-weight: 600;
+  list-style-type: none;
+  line-height: 3;
 }
 
 .edit-profile-user {
@@ -82,7 +84,7 @@
 .edit-profile-item-container {
   padding-right: 32px;
   padding-left: 32px;
-  width: 84px;
+  width: 134px;
   // text-align: center;
   // font-weight: 500;
   // margin-right:100px;

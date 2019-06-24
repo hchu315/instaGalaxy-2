@@ -21,10 +21,10 @@ class AccountsEdit extends React.Component {
         <section className="accounts-edit">
         <nav className="accounts-edit-options">
           <ul className="edit-profile-selector-container">
-            <li className="edit-profile-selector" onClick={() => this.setState({selected: true})}>
+            <li className={this.state.selected ? "edit-profile-selector-selected" : "edit-profile-selector"} onClick={() => this.setState({selected: true})}>
               Edit Profile
             </li>
-                <li className="edit-profile-selector" onClick={() => this.setState({selected: false})}> 
+                <li className={this.state.selected ? "edit-profile-selector" : "edit-profile-selector-selected"} onClick={() => this.setState({selected: false})}> 
               Change Password
             </li>
                 <li className="edit-profile-selector" onClick={() => { this.props.logout() }}> 

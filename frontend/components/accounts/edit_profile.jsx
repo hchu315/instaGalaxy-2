@@ -3,6 +3,16 @@ import React from 'react';
 class EditProfile extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      fullName: this.props.currentUser.full_name,
+      username: this.props.currentUser.username,
+      bio: this.props.currentUser.bio
+    }
+  }
+
+  handleUpdate(field){
+    return e => this.setState({ 
+      [field] : e.currentTarget.value})
   }
 
   render() {
@@ -15,7 +25,7 @@ class EditProfile extends React.Component {
                 </label>
           </aside>
           <div>
-            <input value={this.props.currentUser.full_name} onChange=""></input>
+            <input value={this.state.fullName} onChange={this.handleUpdate("fullName").bind(this)} type="text"></input>
           </div>
         </div >
         <div className="edit-profile-items">
@@ -25,7 +35,7 @@ class EditProfile extends React.Component {
                 </span>
           </aside>
           <div>
-            <input value={this.props.currentUser.username}></input>
+            <input value={this.state.username} onChange={this.handleUpdate("username").bind(this)} type="text"></input>
           </div>
         </div>
         <div className="edit-profile-items">
@@ -35,7 +45,7 @@ class EditProfile extends React.Component {
                 </span>
           </aside>
           <div>
-            <input value={this.props.currentUser.bio}></input>
+            <input value={this.state.bio} onChange={this.handleUpdate("bio").bind(this)} type="text"></input>
           </div>
         </div>
         <div className="edit-submit-button-container">
