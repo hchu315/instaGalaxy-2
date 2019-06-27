@@ -1,9 +1,4 @@
 .accounts-edit-page {
-  // margin-top: 80px;
-  // margin-bottom: 40px;
-  // height: 100%;
-  // max-height: 100%;
-  // max-width: 100%;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -21,19 +16,15 @@
 
 .accounts-edit {
   display: flex;
-  // width: 935px;
   width: 635px;
-  // height: 646px;
   height: 446px;
   border: 2px solid #dbdbdb;
   border-radius: 3px;
-  // background-color: #fff;
   background-color: lightgrey;
   margin-top: 14px; 
 }
 
 .accounts-edit-options {
-  // border-right: 1px solid #dbdbdb;
   border-right: 3px solid #dbdbdb;
   flex: 1;
 }
@@ -75,7 +66,6 @@
 
 .edit-profile-items {
   display: flex;
-  // margin-left: 84px;
   margin-bottom: 16px;
   text-align: right;
 
@@ -85,20 +75,13 @@
   padding-right: 32px;
   padding-left: 32px;
   width: 134px;
-  // text-align: center;
-  // font-weight: 500;
-  // margin-right:100px;
 }
 
 .edit-profile-item-labels {
   font-weight: 600;
-  // white-space: nowrap;
-  // text-align: right;
-  // text-overflow: clip;
 }
 
 .edit-submit-button-container {
-  // text-align: center;
   margin-left: 200px;
 }
 

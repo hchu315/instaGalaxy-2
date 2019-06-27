@@ -1,7 +1,4 @@
 import React from 'react';
-// import NavBarContainer from '../nav_bar/nav_bar_container';
-// import Footer from "../footer/footer";
-
 
 class EditPassword extends React.Component {
   constructor(props) {
@@ -9,7 +6,6 @@ class EditPassword extends React.Component {
   }
 
   render() {
-    // console.log(this.props)
     return (
               <form className="accounts-edit-form">
                 <div className="edit-profile-items">
