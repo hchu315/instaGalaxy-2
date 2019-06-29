@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { fetchPosts } from '../../actions/post_actions';
+import { fetchUser } from '../../actions/user_actions';
 import Greeting from './greeting';
 import { openModal } from '../../actions/modal_actions';
 
@@ -14,6 +15,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchtoProps = (dispatch) => ({
   fetchPosts: () => dispatch(fetchPosts()),
+  fetchUser: (id) => dispatch(fetchUser(id)),
   openModal: () => dispatch(openModal('logout')),
   openPost: (img) => dispatch(openModal(img))
 });

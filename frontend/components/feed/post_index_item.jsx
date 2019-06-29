@@ -22,7 +22,6 @@ class PostIndexItem extends React.Component {
   }
 
   render(){
-    // console.log(this.props)
     return (
     <section className="feed-scroll">
       <article className="post-item-container">

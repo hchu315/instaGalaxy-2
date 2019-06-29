@@ -12,16 +12,18 @@ class Greeting extends React.Component {
 
   componentDidMount(){
     this.props.fetchPosts();
+    this.props.fetchUser(parseInt(this.props.match.params.userId))
   }
 
   renderPosts(){
+    // console.log(typeof this.props.match.params.userId)
     let { currentUser, posts } = this.props
     if (Object.keys(posts).length === 0) {
       return null;
     } else {
       return (
         <div className="personal-album-inner-container" >
-          {posts.map(post => post.user_id === currentUser.id ?
+          {posts.map(post => post.user_id == this.props.match.params.userId ?
           <img src={post.photoUrl} onClick={ () => this.props.openPost(post.photoUrl) } className="album-picture"/> : ''
           )}
         </div>
@@ -35,7 +37,9 @@ class Greeting extends React.Component {
   // )}
 
   render() {
-    // console.log(this.props.currentUser.username)
+    // console.log(this.props.currentUser)
+    const profileUser = parseInt(this.props.match.params.userId)
+    // console.log(this.props.currentUser.id === profileUser)
     return (
       <div className="user-page-container">
         <Modal currentUser={this.props.currentUser} />
@@ -52,7 +56,9 @@ class Greeting extends React.Component {
                 <div className="user-settings-bar">
                   <div className="user-page-username">{this.props.currentUser.username}</div>
                   <Link className="edit-profile-button-container" to={"/accounts/edit"}>
-                    <button className="edit-profile-button">Edit Profile</button>
+                    <button className="edit-profile-button"> 
+                    { this.props.currentUser.id === profileUser ? "Edit Profile" : "Follow" }
+                    </button>
                   </Link>
                   <div className="account-settings-icon-container">
                     <div className="account-settings-icon">
