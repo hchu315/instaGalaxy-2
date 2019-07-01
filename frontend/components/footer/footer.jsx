@@ -13,6 +13,7 @@ export default(props) => {
                 <li className="footer-nav-items"><a className="footer-nav-links" href="https://hchu315.github.io/Portfolio/">About me</a></li>
                 <li className="footer-nav-items"><a className="footer-nav-links" href="https://www.linkedin.com/in/henry-chu-65578a13a/">LinkedIn</a></li>
                 <li className="footer-nav-items"><a className="footer-nav-links" href="https://github.com/hchu315">Github</a></li>
+                <li className="footer-nav-items"><a className="footer-nav-links" href="https://angel.co/henry-chu-6?al_content=view+your+profile&al_source=transaction_feed%2Fnetwork_sidebar">AngelList</a></li>
           </ul>
         </nav>
         <span className="copyright-logo">© 2019 Instagalaxy</span>
