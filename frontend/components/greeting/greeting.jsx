@@ -11,12 +11,11 @@ class Greeting extends React.Component {
   }
 
   componentDidMount(){
-    this.props.fetchPosts();
-    this.props.fetchUser(parseInt(this.props.match.params.userId))
+    this.props.fetchPosts();  
+    this.props.fetchUser(this.props.match.params.userId)
   }
 
   renderPosts(){
-    // console.log(typeof this.props.match.params.userId)
     let { currentUser, posts } = this.props
     if (Object.keys(posts).length === 0) {
       return null;
@@ -37,24 +36,24 @@ class Greeting extends React.Component {
   // )}
 
   render() {
-    // console.log(this.props.currentUser)
+    if (!this.props.user) return null;
     const profileUser = parseInt(this.props.match.params.userId)
-    // console.log(this.props.currentUser.id === profileUser)
+    const user = this.props.user
     return (
       <div className="user-page-container">
-        <Modal currentUser={this.props.currentUser} />
+        <Modal currentUser={user} />
         <NavBarContainer />
         <div className="user-page">
           <div className="user-entire-feed">
             <header className="user-header-container">
               <div className="user-picture-container">
                 <div className="user-picture">
-                  <img className="picture-img" src={this.props.currentUser.photoUrl} alt=""/>
+                  <img className="picture-img" src={user.photoUrl} alt=""/>
                 </div>
               </div>
               <section className="user-info-container">
                 <div className="user-settings-bar">
-                  <div className="user-page-username">{this.props.currentUser.username}</div>
+                  <div className="user-page-username">{user.username}</div>
                   <Link className="edit-profile-button-container" to={"/accounts/edit"}>
                     <button className="edit-profile-button"> 
                     { this.props.currentUser.id === profileUser ? "Edit Profile" : "Follow" }
@@ -75,8 +74,8 @@ class Greeting extends React.Component {
                   <li> <span className="numbers">1138</span> following</li>
                 </ul>
                 <div className="fullname-bio-container">
-                  <span>{this.props.currentUser.full_name}</span>
-                  {/* <span>{this.props.currentUser.bio}</span> */}
+                  <span>{user.full_name}</span>
+                  {/* <span>{user.bio}</span> */}
                 </div>
               </section>
             </header>
