@@ -84,7 +84,6 @@ class PostIndexItem extends React.Component {
         </div>
         <div className="misc-post-functions"></div>
       </article>
-
     </section>
   )}
 }

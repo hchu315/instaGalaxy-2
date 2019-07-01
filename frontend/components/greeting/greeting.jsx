@@ -10,7 +10,7 @@ class Greeting extends React.Component {
     this.renderPosts = this.renderPosts.bind(this);
   }
 
-  componentDidMount(){
+  componentDidMount() {
     this.props.fetchPosts();  
     this.props.fetchUser(this.props.match.params.userId)
   }
@@ -29,11 +29,20 @@ class Greeting extends React.Component {
       )
     }
   }
-  // (<img src={post.photoUrl} onClick={ () => this.props.openPost(post.photoUrl) }/>)
-  //
-  // {currentUser.posts.map(postId =>
-  //   <img src={posts[postId].photoUrl} onClick={ () => this.props.openPost(posts[postId].photoUrl) }/>
-  // )}
+
+  handleClick(e) {
+    e.preventDefault();
+    if (e.currentTarget.innerText === "Follow") {
+      e.currentTarget.innerText = "Following";
+      e.currentTarget.className = "edit-profile-button-nf";
+    } else {
+      e.currentTarget.innerText = "Follow";
+      e.currentTarget.className = "edit-profile-button-f";
+    }
+
+    console.log(e.currentTarget.className)
+    // console.log(e.currentTarget.text)
+  }
 
   render() {
     if (!this.props.user) return null;
@@ -54,8 +63,11 @@ class Greeting extends React.Component {
               <section className="user-info-container">
                 <div className="user-settings-bar">
                   <div className="user-page-username">{user.username}</div>
-                  <Link className="edit-profile-button-container" to={"/accounts/edit"}>
-                    <button className="edit-profile-button"> 
+                  <Link className="edit-profile-button-container" to={"/accounts/edit"} >
+                    <button 
+                      className={this.props.currentUser.id === profileUser ? "edit-profile-button" : "edit-profile-button-f"} 
+                      onClick={this.props.currentUser.id === profileUser ? '' : e => this.handleClick(e)}
+                    > 
                     { this.props.currentUser.id === profileUser ? "Edit Profile" : "Follow" }
                     </button>
                   </Link>

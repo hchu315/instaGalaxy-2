@@ -22,9 +22,3 @@ class Api::UsersController < ApplicationController
   end
 
 end
-
-  # debugger
-    # if @users
-  # FIX THIS
-    # else
-    #   flash.now[:errors] = user.errors.full_messages

@@ -9,6 +9,7 @@ class Api::FollowsController < ApplicationController
   end
 
   def destroy
+    # @follow = 
   end
 
   def follow_params
