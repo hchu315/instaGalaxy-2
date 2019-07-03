@@ -54,9 +54,12 @@
 }
 
 .picture-img {
-   width: 152px;
-   height: 152px;
-   border-radius: 50%;
+  width: 152px;
+  height: 152px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
 }
 
 .user-info-container {
@@ -193,6 +196,9 @@
   height: 293px;
   margin-bottom: 18px;
   margin-right: 18px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
 }
 
 .album-picture:hover {

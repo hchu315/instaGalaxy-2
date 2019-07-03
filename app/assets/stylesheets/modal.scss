@@ -36,21 +36,26 @@
   // padding: 4px 8px;
   display: flex;
   background: white;
-  position: relative;
+  // position: relative;
   width: 916px;
   height: 600px;
   // border-radius: 12px;
 }
 
 .post-show {
-  width: 600px;
+  min-width: 600px;
   height: 600px;
+  // overflow: hidden;
+  background-size: cover;
+  // background-position: center;
 }
 
 .post-show-sidebar {
   padding: 20px;
   width: 100%;
-
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
 }
 
 .post-show-header {
