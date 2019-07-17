@@ -9,9 +9,9 @@
 
 10.times do |i|
   user = User.create({
-    username: Faker::StarWars.unique.character,
+    username: Faker::Movies::StarWars.unique.character,
     email: Faker::Internet.free_email,
-    full_name: Faker::StarWars.vehicle,
+    full_name: Faker::Movies::StarWars.vehicle,
     password: Faker::Internet.password(8)
     })
     user.image.attach(io: File.open("#{Rails.root}/app/assets/images/instagalaxy_album/users_page/#{i}.png"), filename: "#{i}.png")
@@ -22,7 +22,7 @@ end
 10.times do |num|
   post = Post.create({
     user_id: Faker::Number.unique.between(1, 10),
-    post_caption: Faker::StarWars.unique.quote
+    post_caption: Faker::Movies::StarWars.unique.quote
     })
     post.image.attach(io: File.open("#{Rails.root}/app/assets/images/instagalaxy_album/users/#{num}.jpg"), filename: "#{num}.jpg")
     sleep(3)
