@@ -39,6 +39,9 @@ class Greeting extends React.Component {
       e.currentTarget.innerText = "Follow";
       e.currentTarget.className = "edit-profile-button-f";
     }
+
+    console.log(e.currentTarget.className)
+    // console.log(e.currentTarget.text)
   }
 
   render() {

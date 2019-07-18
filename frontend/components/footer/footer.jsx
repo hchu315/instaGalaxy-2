@@ -21,3 +21,12 @@ export default(props) => {
     </div>
   </footer>
 )};
+
+{/* <li className="footer-nav-items"><a className="footer-nav-links" href="">API</a></li>
+  <li className="footer-nav-items"><a className="footer-nav-links" href="">Jobs</a></li>
+  <li className="footer-nav-items"><a className="footer-nav-links" href="">Privacy</a></li>
+  <li className="footer-nav-items"><a className="footer-nav-links" href="">Terms</a></li>
+  <li className="footer-nav-items"><a className="footer-nav-links" href="">Directory</a></li>
+  <li className="footer-nav-items"><a className="footer-nav-links" href="">Profiles</a></li>
+  <li className="footer-nav-items"><a className="footer-nav-links" href="">Hashtags</a></li>
+  <li className="footer-nav-items"><a className="footer-nav-links" href="">Language</a></li> */}
