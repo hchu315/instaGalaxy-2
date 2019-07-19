@@ -45,6 +45,17 @@
 .post-show {
   width: 600px;
   height: 600px;
+  // background-size: auto;
+  // object-fit: fill;
+  // overflow: hidden;
+}
+
+.post-show-image {
+  width: 600px;
+  height: 600px;
+  background-size: cover;
+  // width: 100%;
+  // height: 100%;
 }
 
 .post-show-sidebar {

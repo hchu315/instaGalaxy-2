@@ -11,14 +11,23 @@ class PostIndexItem extends React.Component {
     this.deleteLike = this.props.deleteLike;
     this.createLike = this.props.createLike;
     this.createComment = this.props.createComment;
+    this.handleBookmark = this.handleBookmark.bind(this);
+    this.state = {
+      isSelected: false
+    }
   }
 
-  handleLike(e){
+  handleLike(e) {
     if (this.props.post.liked) {
       this.deleteLike(this.props.post.id);
     } else {
       this.createLike(this.props.post.id);
     }
+  }
+
+  handleBookmark() {
+    const isSelected = this.state.isSelected;
+    this.setState({ isSelected: !isSelected });
   }
 
   render(){
@@ -50,9 +59,11 @@ class PostIndexItem extends React.Component {
               <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" className="feather feather-upload"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
             </span>
             <span className="favorite-icon-container">
-              <button className="favorite-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" className="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              </button>
+              {/* <button className="favorite-icon"> */}
+              <a>
+                <div className={this.state.isSelected ? "favorite-icon-selected" : "favorite-icon"} onClick={this.handleBookmark} />
+              </a>
+              {/* </button> */}
             </span>
           </section>
           <section className="likes-count-container">
@@ -60,15 +71,12 @@ class PostIndexItem extends React.Component {
           </section>
           <div className="comments-container">
             <ul className="poster-comment-container">
-              <li className="poster-comment">
+              <span className="poster-comment">
                 <span className="post-author">
-                  {this.props.post.author}</span>
-                <div className='user-caption-wrapper'>
-                  <span className="user-caption">
+                  {this.props.post.author}
+                </span>
                     {this.props.post.post_caption}
-                  </span>
-                </div>
-              </li>
+              </span>
               <li className='post-comments'>
                 <CommentIndexContainer
                   postId={this.props.post.id}/>
