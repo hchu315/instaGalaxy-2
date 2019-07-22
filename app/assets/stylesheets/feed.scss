@@ -39,11 +39,12 @@
   height: 30px;
 }
 
+.users-link {
+  text-decoration: none;
+}
 .author-username {
   color: #262626;
   font-weight: 600;
-  // text-decoration: none;
-  // list-style-type: none;
 }
 
 .post-img-container {
@@ -138,10 +139,15 @@
 }
 
 .post-author {
+  color: black;
   font-weight: 600;
   text-transform: lowercase;
   padding-right: 5px;
   white-space: nowrap;
+}
+
+.post-comments > div {
+    margin-left: 12px;
 }
 
 .user-caption-wrapper {

@@ -23,7 +23,8 @@ class Greeting extends React.Component {
       return (
         <div className="personal-album-inner-container" >
           {posts.map(post => post.user_id == this.props.match.params.userId ?
-          <img src={post.photoUrl} onClick={ () => this.props.openPost(post.photoUrl) } className="album-picture"/> : ''
+          <img src={post.photoUrl} 
+            onClick={ () => this.props.openPost({ post: post  }) } className="album-picture"/> : ''
           )}
         </div>
       )
@@ -39,9 +40,6 @@ class Greeting extends React.Component {
       e.currentTarget.innerText = "Follow";
       e.currentTarget.className = "edit-profile-button-f";
     }
-
-    console.log(e.currentTarget.className)
-    // console.log(e.currentTarget.text)
   }
 
   render() {

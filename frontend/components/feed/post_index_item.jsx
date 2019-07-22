@@ -38,7 +38,7 @@ class PostIndexItem extends React.Component {
           <Link to={`/users/${this.props.userId}`}>
             <div className="author-profile-picture" />
           </Link>
-            <Link to={`/users/${this.props.userId}`}>
+            <Link className="users-link" to={`/users/${this.props.userId}`}>
           <div className="author-username">
             {this.props.post.author}
           </div>
@@ -72,14 +72,17 @@ class PostIndexItem extends React.Component {
           <div className="comments-container">
             <ul className="poster-comment-container">
               <span className="poster-comment">
-                <span className="post-author">
-                  {this.props.post.author}
-                </span>
+                <Link className="users-link" to={`/users/${this.props.userId}`}>
+                  <span className="post-author">
+                    {this.props.post.author}
+                  </span>
+                </Link>
                     {this.props.post.post_caption}
               </span>
               <li className='post-comments'>
                 <CommentIndexContainer
-                  postId={this.props.post.id}/>
+                  postId={this.props.post.id}
+                />
               </li>
             </ul>
           </div>

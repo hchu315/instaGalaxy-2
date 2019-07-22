@@ -7,7 +7,7 @@ import { openModal } from '../../actions/modal_actions';
 
 const mapStateToProps = (state, ownProps) => {
   const userId = ownProps.match.params.userId; //pulls id for the user profile to be displayed
-  
+  // console.log(state)
   return ({
     currentUser: state.entities.users[state.session.id],
     user: state.entities.users[userId],

@@ -5,7 +5,6 @@ class Api::CommentsController < ApplicationController
 
   def create
     @comment = Comment.new(comment_params)
-    # debugger
     # @comment = Comment.find(params[:id])
     @comment.user_id = current_user.id
     if @comment.save
