@@ -16,6 +16,8 @@ class Api::LikesController < ApplicationController
       @like.destroy
       @post = @like.post
       render "api/posts/show"
+    # else
+      # render json: @like.errors.full_messages, status: 422
     end
   end
 

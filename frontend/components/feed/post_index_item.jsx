@@ -17,7 +17,7 @@ class PostIndexItem extends React.Component {
     }
   }
 
-  handleLike(e) {
+  handleLike() {
     if (this.props.post.liked) {
       this.deleteLike(this.props.post.id);
     } else {
