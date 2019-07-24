@@ -6,9 +6,9 @@ export default ({ currentUser, photoUrl, fetchComments, post, createLike, delete
   // console.log(currentUser)
   console.log(props)
   // console.log(state)
-  componentDidMount() {
-    // fetchPost();
-  }
+  // componentDidMount() {
+  //   // fetchPost();
+  // }
 
   return (
     <div>
