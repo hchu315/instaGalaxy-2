@@ -12,6 +12,7 @@ import SignupContainer from './session/signup_container';
 import LoginContainer from './session/login_form_container';
 import FeedContainer from './feed/feed_container';
 import GreetingContainer from './greeting/greeting_container';
+import PostShowContainer from './postshow/post_show_container';
 import Upload from './upload/upload';
 import AccountsEditContainer from './accounts/accounts_edit_container';
 import Errors from './errors/error';
@@ -25,6 +26,7 @@ const App = () => (
         <AuthRoute exact path="/signup" component={SignupContainer} />
         <ProtectedRoute exact path="/feed" component={FeedContainer} />
         <ProtectedRoute exact path="/users/:userId" component={GreetingContainer} />
+        <ProtectedRoute exact path="/posts/:postId" component={PostShowContainer} />
         <ProtectedRoute exact path="/upload" component={Upload} />
         <ProtectedRoute exact path="/accounts/edit" component={AccountsEditContainer} />
         <Route component={Errors} />
