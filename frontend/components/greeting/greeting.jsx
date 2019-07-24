@@ -23,8 +23,11 @@ class Greeting extends React.Component {
       return (
         <div className="personal-album-inner-container" >
           {posts.map(post => post.user_id == this.props.match.params.userId ?
-          <img src={post.photoUrl} 
-            onClick={ () => this.props.openPost({ post: post  }) } className="album-picture"/> : ''
+          <img 
+            src={post.photoUrl} 
+            key={post.id}
+            onClick={ () => this.props.openPost({ post: post  }) } 
+            className="album-picture"/> : ''
           )}
         </div>
       )

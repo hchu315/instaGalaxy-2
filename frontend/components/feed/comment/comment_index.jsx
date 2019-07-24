@@ -16,6 +16,7 @@ class CommentIndex extends React.Component {
     let comments = this.props.comments.map(comment => {
       if (this.props.postId === comment.post_id){
         return <CommentIndexItem
+            key={comment.id}
             comment={comment}
             postId={this.props.postId}
             currentUser={this.currentUser}

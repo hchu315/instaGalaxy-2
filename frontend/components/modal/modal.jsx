@@ -43,6 +43,8 @@ function Modal({ modal, closeModal, logout, fetchComments, currentUser, photoUrl
         fetchPost={ fetchPost }
         createLike={ createLike }
         deleteLike={ deleteLike }
+        // liked={ modal.post.liked }
+        // key={ modal.post.liked }
          />
       break;
     default:
