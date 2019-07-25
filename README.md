@@ -1,6 +1,6 @@
 # README
 
-[InstaGalaxy Live](https://instagalaxy.herokuapp.com/#/)
+[InstaGalaxy Live](https://insta-galaxy.herokuapp.com/#/)
 
 # InstaGalaxy
 
