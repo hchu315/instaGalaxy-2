@@ -76,8 +76,9 @@ class PostShowModal extends React.Component {
             <div className="post-show-actions">
               <PostShowActionBar 
                 liked={ this.props.post.liked }
-                createlike={ this.props.createLike.bind(this) }
-                deletelike={ this.props.deleteLike.bind(this) }
+                createLike={ this.props.createLike }
+                deleteLike={ this.props.deleteLike }
+                postId={ this.props.post.id }
               />
                {/* <section className="post-icons-bar">
                 <span className="like-icon" >
@@ -98,6 +99,9 @@ class PostShowModal extends React.Component {
                 </span>
               </section> */}
             </div>
+            <section className="likes-count-container">
+              <div className="likes-count"> {this.props.post.likesCount} {this.props.post.likesCount > 1 ? 'likes' : 'like'}</div>
+            </section>
             <div className="time-of-postshow">
               <Timestamp time={this.props.post.created_at} actualSeconds format='date' />
             </div>
