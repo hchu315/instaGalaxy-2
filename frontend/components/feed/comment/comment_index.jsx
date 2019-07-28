@@ -21,7 +21,6 @@ class CommentIndex extends React.Component {
             postId={this.props.postId}
             currentUser={this.currentUser}
           />;
-
       }
     }
   )
