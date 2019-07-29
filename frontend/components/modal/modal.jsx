@@ -41,6 +41,7 @@ function Modal({ modal, closeModal, logout, currentUser, photoUrl, createLike, d
         post={ modal.post }
         createLike={ createLike }
         deleteLike={ deleteLike }
+        closeModal={ closeModal }
          />
       break;
     default:

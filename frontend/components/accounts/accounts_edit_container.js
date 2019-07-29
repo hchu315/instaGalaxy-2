@@ -4,7 +4,6 @@ import AccountsEdit from './accounts_edit';
 import { logout } from '../../actions/session_actions';
 
 const mapStateToProps = (state) => {
-  console.log(state)
   return {
     currentUser: state.entities.users[state.session.id],
   }

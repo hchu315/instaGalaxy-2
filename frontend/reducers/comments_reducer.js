@@ -7,7 +7,6 @@ const commentsReducer = (oldState = {}, action) => {
     case RECEIVE_COMMENTS:
       return merge({}, oldState, action.comments);
     case RECEIVE_COMMENT:
-      // debugger
       return merge({}, oldState, action.comment);
     default:
       return oldState;

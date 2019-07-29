@@ -28,20 +28,16 @@ class PostShowModal extends React.Component {
         </div>
         <div className="post-show-sidebar"> 
           <header className="post-show-header">
-            {/* <Link to={`/users/${this.props.post.user_id}`}> */}
               <img className="post-show-avatar" src={ this.props.photoUrl} />
               <span className="post-show-user">
                 {this.props.currentUser}
               </span>
-            {/* </Link> */}
           </header>
           <section className="post-show-comment-container">
             <div className="post-show-comments">
-              <Link className="users-link" to={`/users/${this.props.userId}`}>
                 <span className="post-author">
                   {this.props.post.author}
                 </span>
-              </Link>
               {this.props.post.post_caption}
               <CommentIndexContainer 
                 postId={this.props.post.id}
@@ -73,3 +69,9 @@ class PostShowModal extends React.Component {
 }
 
 export default PostShowModal;
+
+{/* <Link to={`/users/${this.props.post.user_id}`}> */ }
+
+{/* <Link className="users-link" to={`/users/${this.props.userId}`}> */ }
+{/* </Link> */ }
+

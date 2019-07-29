@@ -13,7 +13,6 @@ class AccountsEdit extends React.Component {
   }
 
   render() {
-    // console.log(this.props)
     return (
       <div className="accounts-edit-page">
       <NavBarContainer></NavBarContainer>
@@ -42,7 +41,6 @@ class AccountsEdit extends React.Component {
             </h4>
           
           </div>
-          {/* <form className="accounts-edit-form"> */}
             { this.state.selected ? 
             <EditProfile 
               currentUser={this.props.currentUser}
@@ -50,7 +48,6 @@ class AccountsEdit extends React.Component {
             <EditPassword
             />
             }
-          {/* </form> */}
         </article>
         </section>
       <Footer></Footer>
@@ -61,37 +58,3 @@ class AccountsEdit extends React.Component {
 }
 
 export default AccountsEdit;
-
-{/* <div className="edit-profile-items">
-<aside className="edit-profile-item-container">
-  <label className="edit-profile-item-labels">
-    Name
-                </label>
-</aside>
-  <div>
-    <input value={this.props.currentUser.full_name} onChange=""></input>
-  </div>
-            </div >
-  <div className="edit-profile-items">
-    <aside className="edit-profile-item-container">
-      <span className="edit-profile-item-labels">
-        Username
-                </span>
-    </aside>
-    <div>
-      <input value={this.props.currentUser.username}></input>
-    </div>
-  </div>
-  <div className="edit-profile-items">
-    <aside className="edit-profile-item-container">
-      <span className="edit-profile-item-labels">
-        Bio
-                </span>
-    </aside>
-    <div>
-      <input value={this.props.currentUser.bio}></input>
-    </div>
-  </div>
-  <div className="edit-submit-button-container">
-    <button className="edit-submit-button" type="button">Submit</button>
-  </div> */}

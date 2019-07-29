@@ -67,7 +67,7 @@ class Greeting extends React.Component {
                   <Link className="edit-profile-button-container" to={"/accounts/edit"} >
                     <button 
                       className={this.props.currentUser.id === profileUser ? "edit-profile-button" : "edit-profile-button-f"} 
-                      onClick={this.props.currentUser.id === profileUser ? '' : e => this.handleClick(e)}
+                      onClick={this.props.currentUser.id === profileUser ? null : e => this.handleClick(e)}
                     > 
                     { this.props.currentUser.id === profileUser ? "Edit Profile" : "Follow" }
                     </button>

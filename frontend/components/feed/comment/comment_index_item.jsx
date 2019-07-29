@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const CommentIndexItem = ({ postId, comment, currentUser }) => {
+const CommentIndexItem = ({ postId, comment, currentUser, closeModal }) => {
   return (
     <div className="post-comment">
-      <Link className="users-link" to={`/users/${comment.user_id}`}>
-        <span className="comment-author">
+      <Link className="users-link" to={`/users/${comment.user_id}`} >
+        <span className="comment-author" onClick={ closeModal }>
           { (postId === comment.post_id) ? comment.username ? comment.username : currentUser.username : '' }
         </span>
       </Link>

@@ -6,10 +6,7 @@ class CommentIndex extends React.Component {
     super(props);
     this.fetchComments = this.props.fetchComments;
     this.currentUser = this.props.currentUser;
-  }
-
-  componentDidMount(){
-    this.fetchComments();
+    this.closeModal = this.props.closeModal;
   }
 
   render(){
@@ -20,6 +17,7 @@ class CommentIndex extends React.Component {
             comment={comment}
             postId={this.props.postId}
             currentUser={this.currentUser}
+            closeModal={this.closeModal}
           />;
       }
     }
