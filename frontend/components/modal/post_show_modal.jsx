@@ -12,40 +12,13 @@ class PostShowModal extends React.Component {
     this.state = {
       isSelected: false,
     }
-    // this.deleteLike = this.props.deleteLike;
-    // this.createLike = this.props.createLike;
-    // this.handleLike = this.handleLike.bind(this);
     this.handleBookmark = this.handleBookmark.bind(this);
   }
-
-  // handleLike() {
-  //   // const liked = this.state.liked;
-  //   // console.log(this.props.post.id)
-  //   // console.log(this.props.liked)
-    
-  //   if (this.props.post.liked) {
-  //     this.deleteLike(this.props.post.id);
-  //   } else {
-  //     this.createLike(this.props.post.id);
-  //   }
-
-  //   // this.setState(
-  //   //   { liked: !liked }
-  //   // )
-  // }
 
   handleBookmark() {
     const isSelected = this.state.isSelected;
     this.setState({ isSelected: !isSelected });
   }
-
-  // componentDidUpdate(prevProps) {
-  //   if (this.props.liked !== prevProps.liked){
-
-  //   }
-  //   // this.props.fetchPost(this.props.post.id)
-  //   // console.log('test')
-  // }
 
   render() {
     return (

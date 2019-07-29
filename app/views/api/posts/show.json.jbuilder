@@ -3,5 +3,5 @@
   json.photoUrl url_for(@post.image)
   json.author @post.user.username
   json.likesCount @post.likes.count
-  json.liked @post.likes.exists?(user_id: current_user.id)
+  json.liked @post.likes.exists?({user_id: current_user.id})
 # end
