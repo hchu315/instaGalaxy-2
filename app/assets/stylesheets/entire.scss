@@ -1,6 +1,12 @@
 #root {
 }
 
+@media all and (max-width: 850px) {
+  .my_image {
+    display: none;
+  }
+}
+
 .main {
   display: flex;
   align-items: center;
