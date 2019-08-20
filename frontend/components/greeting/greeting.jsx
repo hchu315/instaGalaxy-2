@@ -34,7 +34,7 @@ class Greeting extends React.Component {
     }
   }
 
-  handleClick(e) {
+  handleFollow(e) {
     e.preventDefault();
     if (e.currentTarget.innerText === "Follow") {
       e.currentTarget.innerText = "Following";
@@ -67,7 +67,7 @@ class Greeting extends React.Component {
                   <Link className="edit-profile-button-container" to={"/accounts/edit"} >
                     <button 
                       className={this.props.currentUser.id === profileUser ? "edit-profile-button" : "edit-profile-button-f"} 
-                      onClick={this.props.currentUser.id === profileUser ? null : e => this.handleClick(e)}
+                      onClick={this.props.currentUser.id === profileUser ? null : e => this.handleFollow(e)}
                     > 
                     { this.props.currentUser.id === profileUser ? "Edit Profile" : "Follow" }
                     </button>
