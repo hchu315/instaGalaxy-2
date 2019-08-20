@@ -35,8 +35,78 @@ def self.find_by_credentials(username, password)
  ```
 
 2) User Uploads - Allows an user to upload images and add an optional caption to the image.
-3) User Follows - Allows an user to follow their friends and family, or favorite users. (In progress)
+
+```jsx
+handleSubmit(e) {
+    e.preventDefault();
+    const formData = new FormData();
+    formData.append('post[post_caption]', this.state.postCaption);
+    formData.append('post[image]', this.state.imageFile);
+
+    $.ajax({
+      method: "post",
+      url: "api/posts",
+      data: formData,
+      contentType: false,
+      processData: false
+    }).then(response => console.log(response.message),
+    response => console.log(response.responseJSON)
+  ).then(() => alert("Success!"));
+
+    this.state.postCaption = '';
+    this.state.imageFile = null
+  }
+```
+
+3) User Follows - Allows an user to follow their friends and family, or favorite users.
+
+```jsx
+ handleFollow(e) {
+    e.preventDefault();
+    if (e.currentTarget.innerText === "Follow") {
+      e.currentTarget.innerText = "Following";
+      e.currentTarget.className = "edit-profile-button-nf";
+    } else {
+      e.currentTarget.innerText = "Follow";
+      e.currentTarget.className = "edit-profile-button-f";
+    }
+  }
+```
+
 4) User Likes - Allows an user to like their favorite photo at the click of a button.
-5) User Comments - Allows an user to leave comments on photos. (In progress)
+
+```ruby
+export const createLike = (postId) => (
+  $.ajax({
+    method: 'POST',
+    url: 'api/likes',
+    data: {like: {post_id: postId} }
+  })
+);
+
+
+export const deleteLike = (postId) => (
+  $.ajax({
+    method: 'DELETE',
+    url: `api/likes/${postId}`
+  })
+);
+```
+
+5) User Comments - Allows an user to leave comments on photos.
+
+```ruby
+const commentsReducer = (oldState = {}, action) => {
+  Object.freeze(oldState);
+  switch(action.type) {
+    case RECEIVE_COMMENTS:
+      return merge({}, oldState, action.comments);
+    case RECEIVE_COMMENT:
+      return merge({}, oldState, action.comment);
+    default:
+      return oldState;
+  }
+};
+```
 
 ![feed-page](https://github.com/hchu315/instaGalaxy/blob/master/app/assets/images/github_user_splashpage.png)
