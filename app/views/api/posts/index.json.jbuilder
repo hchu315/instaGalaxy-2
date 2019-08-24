@@ -7,4 +7,3 @@
     json.liked post.likes.exists?(user_id: current_user.id)
   end
 end
-

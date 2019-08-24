@@ -1,5 +1,7 @@
 import { connect } from 'react-redux';
 import NavBar from './nav_bar';
+import NavBarSearch from './nav_bar_search';
+import { fetchSearchedUsers } from '../../actions/search_actions';
 
 const mapStateToProps = (state) => {
   return ({
@@ -7,5 +9,10 @@ const mapStateToProps = (state) => {
   })
 };
 
+const mapDispatchToProps = (dispatch) => ({
+  fetchSearchedUsers: (key) => dispatch(fetchSearchedUsers(key))
+});
 
-export default connect(mapStateToProps, null)(NavBar);
+
+export default connect(mapStateToProps, mapDispatchToProps)(NavBar);
+// export const NavBarContainer = connect(mapStateToProps, mapDispatchToProps)(NavBar);

@@ -39,6 +39,12 @@ class User < ApplicationRecord
     user && user.is_password?(password) ? user: nil
   end
 
+  def self.search(key)
+    if key
+      where(['username iLIKE ?', "%#{key}%"]).pluck(:username, :id)
+    end
+  end
+
   def password=(password)
     @password = password
     self.password_digest = BCrypt::Password.create(password)

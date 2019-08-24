@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import NavBarSearch from './nav_bar_search';
 
 const NavBar = (props) => {
+
   return (
     <div>
     <nav className="nav-bar">
@@ -18,7 +20,10 @@ const NavBar = (props) => {
           </div>
           <div className="search-bar-container">
             <div className="search-bar">
-              <span className="search-text">Welcome { props.currentUser.username }!</span>
+              {/* <span className="search-text"></span> */}
+              < NavBarSearch
+                fetchSearchedUsers={props.fetchSearchedUsers}
+              />
             </div>
           </div>
           <div className="menu-icons-container">

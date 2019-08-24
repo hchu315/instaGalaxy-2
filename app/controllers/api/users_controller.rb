@@ -1,5 +1,10 @@
 class Api::UsersController < ApplicationController
 
+  def index
+    @users = User.search(params[:key])
+    render "api/users/index"
+  end
+
   def show
     @user = User.find(params[:id])  
     render "api/users/show"
@@ -10,7 +15,6 @@ class Api::UsersController < ApplicationController
     if @user.save
       login(@user)
       render "api/users/show"
-      # FIX THIS??
     else
       render json: @user.errors.full_messages, status: 422
     end

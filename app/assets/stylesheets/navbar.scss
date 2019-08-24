@@ -77,6 +77,14 @@
   font-weight: 500;
 }
 
+.search-bar-test {
+  text-align: center;
+}
+
+.search-bar-test:focus {
+  text-align: left;
+}
+
 .menu-icons-container {
   display: flex;
   justify-content: flex-end;
