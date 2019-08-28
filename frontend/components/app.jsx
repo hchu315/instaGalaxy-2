@@ -16,6 +16,7 @@ import PostShowContainer from './postshow/post_show_container';
 import Upload from './upload/upload';
 import AccountsEditContainer from './accounts/accounts_edit_container';
 import Errors from './errors/error';
+import NavBar from './nav_bar/nav_bar_container';
 import { AuthRoute, ProtectedRoute } from '../utils/route_utils';
 
 // change login to main and flex boxed it to column

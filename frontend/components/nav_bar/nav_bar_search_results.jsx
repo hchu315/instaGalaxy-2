@@ -1,14 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 
 export default function({ searchResults }) {
   let results = searchResults ? Object.entries(searchResults).map((result) =>
+      <Link className="search-links" to={`/users/${result[0]}`}>
     <div className="search-results-item">
-      <Link to={`/users/${result[0]}`}>
       <img className="search-results-image" src={result[1].photoUrl} />
       {result[1].username}
-      </Link>
     </div>
+      </Link>
   ) : null
 
   return (

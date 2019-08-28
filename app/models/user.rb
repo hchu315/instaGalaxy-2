@@ -40,10 +40,10 @@ class User < ApplicationRecord
   end
 
   def self.search(key)
-    if key
+    if key == ''
+      return nil   
+    elsif key
       where(['username iLIKE ?', "%#{key}%"])
-    else
-      null
     end
   end
 
