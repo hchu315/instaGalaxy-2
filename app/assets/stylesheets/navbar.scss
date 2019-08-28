@@ -79,10 +79,44 @@
 
 .search-bar-test {
   text-align: center;
+  width: 215px;
+  height: 28px;
+  font-size: 14px;
+  border-radius: 3px;
+  border: solid 1px #dbdbdb;
+  outline: 0;
 }
 
 .search-bar-test:focus {
   text-align: left;
+}
+
+.search-results-container {
+  // width: 300px;
+  // height: 500px;
+  border: solid 1px #e6e6e6;
+  border-radius: 3px;
+}
+
+.search-results-item {
+  display: flex;
+  width: 265px;
+  height: 60px;
+  background-color: #fafafa;
+  border-bottom: solid 1px #efefef;
+  font-weight: 500;
+  text-transform: lowercase;
+  color: black;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.search-results-image {
+  background-size: 30px 30px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 0 10px;
 }
 
 .menu-icons-container {

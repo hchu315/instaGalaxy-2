@@ -23,6 +23,7 @@ const NavBar = (props) => {
               {/* <span className="search-text"></span> */}
               < NavBarSearch
                 fetchSearchedUsers={props.fetchSearchedUsers}
+                searchResults={props.searchResults}
               />
             </div>
           </div>

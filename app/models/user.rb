@@ -41,7 +41,9 @@ class User < ApplicationRecord
 
   def self.search(key)
     if key
-      where(['username iLIKE ?', "%#{key}%"]).pluck(:username, :id)
+      where(['username iLIKE ?', "%#{key}%"])
+    else
+      null
     end
   end
 

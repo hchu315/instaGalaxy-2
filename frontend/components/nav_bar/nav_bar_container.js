@@ -5,7 +5,8 @@ import { fetchSearchedUsers } from '../../actions/search_actions';
 
 const mapStateToProps = (state) => {
   return ({
-    currentUser: state.entities.users[state.session.id]
+    currentUser: state.entities.users[state.session.id],
+    searchResults: state.entities.users.search
   })
 };
 

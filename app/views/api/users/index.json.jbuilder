@@ -1,5 +1,6 @@
-@users.each do |user|
-  json.set! user[1] do
-    json.username user[0]
+  @users.each do |user|
+    json.set! user.id do
+      json.extract! user, :username
+      json.photoUrl url_for(user.image) if user.image.attached?
+    end
   end
-end
