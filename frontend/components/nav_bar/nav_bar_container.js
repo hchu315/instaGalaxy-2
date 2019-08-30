@@ -14,4 +14,4 @@ const mapDispatchToProps = (dispatch) => ({
   fetchSearchedUsers: (key) => dispatch(fetchSearchedUsers(key))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(NavBar);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(NavBar));

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import NavBarSearch from './nav_bar_search';
 
 const NavBar = (props) => {
@@ -51,4 +51,4 @@ const NavBar = (props) => {
   );
 };
 
-export default NavBar;
+export default withRouter(NavBar);

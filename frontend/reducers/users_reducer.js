@@ -12,7 +12,6 @@ const usersReducer = (oldState = {}, action) => {
     case RECEIVE_PROFILE_USER:
       return merge({}, oldState, {[action.profileUser.user.id]: action.profileUser.user});
     case RECEIVE_SEARCHED_USERS:
-      // return merge({}, oldState, {'search': action.users})
       return ({
         ...oldState, 
         search: action.users

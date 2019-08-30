@@ -92,8 +92,6 @@
 }
 
 .search-results-container {
-  // width: 300px;
-  // height: 500px;
   border: solid 1px #e6e6e6;
   border-radius: 3px;
 }
@@ -111,6 +109,10 @@
   font-weight: 500;
   text-transform: lowercase;
   align-items: center;
+}
+
+.search-results-item:hover {
+  background-color: #efefef;
 }
 
 .search-links {
