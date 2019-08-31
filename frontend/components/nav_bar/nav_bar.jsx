@@ -1,9 +1,8 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import NavBarSearch from './nav_bar_search';
 
 const NavBar = (props) => {
-
   return (
     <div>
     <nav className="nav-bar">
@@ -51,4 +50,4 @@ const NavBar = (props) => {
   );
 };
 
-export default withRouter(NavBar);
+export default NavBar;

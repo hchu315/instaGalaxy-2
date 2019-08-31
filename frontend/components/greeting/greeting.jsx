@@ -15,6 +15,13 @@ class Greeting extends React.Component {
     this.props.fetchUser(this.props.match.params.userId)
   }
 
+  componentDidUpdate(prevProps) {
+    if (prevProps.userId !== this.props.userId) {
+      this.props.fetchPosts();
+      this.props.fetchUser(this.props.userId)
+    }
+  }
+
   renderPosts(){
     let { currentUser, posts } = this.props
     if (Object.keys(posts).length === 0) {

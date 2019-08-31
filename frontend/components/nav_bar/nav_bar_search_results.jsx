@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const NavBarSearchResults = function({ searchResults, handleClick }) {
   let results = searchResults ? Object.entries(searchResults).map((result) =>
@@ -18,4 +18,4 @@ const NavBarSearchResults = function({ searchResults, handleClick }) {
   );
 }
 
-export default withRouter(NavBarSearchResults);
+export default (NavBarSearchResults);

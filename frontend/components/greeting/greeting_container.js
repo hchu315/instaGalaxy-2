@@ -12,6 +12,7 @@ const mapStateToProps = (state, ownProps) => {
     currentUser: state.entities.users[state.session.id],
     user: state.entities.users[userId],
     posts: Object.values(state.entities.posts).reverse(),
+    userId: userId
   });
 };
 
@@ -22,4 +23,4 @@ const mapDispatchtoProps = (dispatch) => ({
   openPost: (img) => dispatch(openModal(img))
 });
 
-export default withRouter(connect(mapStateToProps, mapDispatchtoProps)(Greeting));
+export default connect(mapStateToProps, mapDispatchtoProps)(Greeting);

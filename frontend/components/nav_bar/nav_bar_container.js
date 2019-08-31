@@ -1,5 +1,4 @@
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
 import NavBar from './nav_bar';
 import { fetchSearchedUsers } from '../../actions/search_actions';
 
@@ -14,4 +13,4 @@ const mapDispatchToProps = (dispatch) => ({
   fetchSearchedUsers: (key) => dispatch(fetchSearchedUsers(key))
 });
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(NavBar));
+export default connect(mapStateToProps, mapDispatchToProps)(NavBar);
